@@ -1,0 +1,23 @@
+ <header>
+    <nav>
+      <h1>eatnow</h1>
+    </nav>
+  </header>
+
+  header {
+    background-color: rgb(223, 88, 39);
+    padding: 10px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+/* Título no header */
+header h1 {
+    color: white;
+    text-align: center;
+  
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}

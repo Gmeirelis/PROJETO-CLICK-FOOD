@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Delivery</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+  <!-- Logo e menu -->
+  <div class="logo">
+    <img src="icone/ChatGPT Image 3 de nov. de 2025, 09_25_16.png" alt="Logo">
+    <a href="#">Início</a>
+    <a href="#">Parceiros</a>
+    <a href="#">Sobre nós</a>
+  </div>
+
+  <main>
+
+    <!-- Categorias -->
+    <section class="categoria-geral">
+      <div class="categorias1">
+        <div class="categoria">
+          <img src="icone-categoria.img/hamburgue.png" alt="Hambúrguer">
+        </div>
+        <div class="categoria">
+          <img src="icone-categoria.img/açai.png" alt="Açaí">
+        </div>
+        <div class="categoria">
+          <img src="icone-categoria.img/sorvete.png" alt="Sorvete">
+        </div>
+      </div>
+
+      <div class="categorias2">
+        <div class="categoria">
+          <img src="icone-categoria.img/salgado.png">
+        </div>
+        <div class="categoria">
+          <img src="icone-categoria.img/suco.png" alt="Suco">
+        </div>
+        <div class="categoria">
+          <img src="icone-categoria.img/sorvete.png" alt="Sorvete">
+        </div>
+      </div>
+    </section>
+
+    <!-- Carrossel -->
+    <section class="carrosel">
+      <ul class="slides">
+        <li class="slide" data-active>
+          <img src="img/pizza-promocao.jpeg" alt="Pizza">
+        </li>
+        <li class="slide">
+          <img src="img/macarão.jpeg" alt="Macarrão">
+        </li>
+        <li class="slide">
+          <img src="img/promoçao.png" alt="Promoção">
+        </li>
+      </ul>
+      <div class="progress-bar"></div>
+    </section>
+
+    <!-- Barra de busca -->
+    <section class="buscar">
+      <div class="input-box">
+        <input type="search" placeholder="🔍 Buscar por restaurante" id="filtro">
+      </div>
+    </section>
+
+    <!-- Filtros -->
+   <section class="categoria-filtros">
+    <div class="geral">
+      <a href="#">Distância</a>
+      <a href="#" id="filtroTempo">Tempo</a>
+      <a href="#">Avaliação</a>
+      <a href="#">Promoção</a>
+    </div>
+
+    <!-- Dropdown (aparece quando clica em “Tempo”) -->
+    <div class="dropdown-tempo" id="dropdownTempo" style="display: none;">
+      <button class="tempo-opcao" data-tempo="20">Até 20 min</button>
+      <button class="tempo-opcao" data-tempo="25">Até 25 min</button>
+      <button class="tempo-opcao" data-tempo="35">Até 35 min</button>
+      <button class="tempo-opcao" data-tempo="40">Até 40 min</button>
+      <button class="tempo-opcao" data-tempo="todos">Mostrar todos</button>
+    </div>
+  </section>
+
+    <!-- Restaurantes -->
+
+    <h1 class="lojas">Lojas</h1>
+
+    <section class="restaurantes">
+      <div class="restaurante">
+        <img src="img-restaurante/hamburg.png" alt="Hamburgueria Prime">
+        <div class="description">
+          <h3>Burg Delicious Teste</h3>
+          <p>⭐ 4,5 • Lanches • 30-40 min</p>
+        </div>
+      </div>
+
+      <div class="restaurante">
+        <img src="img-restaurante/asiatico.png" alt="Asiáticos">
+        <div class="description">
+          <h3>Nam Nam Korean</h3>
+          <p>⭐ 5,0 • Japonesa • 25-35 min</p>
+        </div>
+      </div>
+
+      <div class="restaurante">
+        <img src="img-restaurante/resturante-comida-simples.png" alt="Chef Restaurante">
+        <div class="description">
+          <h3>Chef Restaurante</h3>
+          <p>⭐ 4,5 • Lanches • 30-40 min</p>
+        </div>
+      </div>
+
+      <div class="restaurante">
+        <img src="img-restaurante/açai.png" alt="Fast Food Family">
+        <div class="description">
+          <h3>Reino Açai</h3>
+          <p>⭐ 4,5 • Lanches • 30-40 min</p>
+        </div>
+      </div>
+
+      <div class="restaurante">
+        <img src="img-restaurante/sorveteria.png" alt="Fast Food Family">
+        <div class="description">
+          <h3>Sorveteria</h3>
+          <p>⭐ 4,5 • Lanches • 30-40 min</p>
+        </div>
+      </div>
+
+      <div class="restaurante">
+        <img src="img-restaurante/salgado.png" alt="Fast Food Family">
+        <div class="description">
+          <h3>Arlene Salgado</h3>
+          <p>⭐ 4,5 • Lanches • 30-40 min</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-geral">
+      <nav class="menu-inferior">
+
+        <a href="index.html" class="item ativo">
+          <i class="fa-solid fa-house"></i>
+          <span>inicio</span>
+        </a>
+
+        <a href="busca.html" class="item">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span>buscar</span>
+        </a>
+
+        <a href="pedido.html" class="item">
+          <i class="fa-solid fa-list"></i>
+          <span>pedidos</span>
+        </a>
+
+        <a href="perfil.html" class="item">
+          <i class="fa-solid fa-user"></i>
+          <span>perfil</span>
+        </a>
+
+
+      </nav>
+      </div>
+    </section>
+
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>
