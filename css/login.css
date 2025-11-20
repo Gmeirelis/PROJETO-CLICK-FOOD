@@ -114,9 +114,12 @@ body {
     }
 
     .login {
+        position: relative;
         padding: 40px 25px;
         max-width: 100%;
         border-radius: 15px;
+        right: 30px;
+
     }
 
     .entrar {
