@@ -21,11 +21,11 @@ const campoFiltro = document.getElementById('filtro');
     restaurantes.forEach(restaurante => {
       const nome = restaurante.querySelector('h3').textContent.toLowerCase();
 
-      if (nome.includes(texto)) {
-        restaurante.style.display = 'flex'; // mostra o restaurante
-      } else {
-        restaurante.style.display = 'none'; // esconde o restaurante
-      }
+     if (nome.includes(texto)) {
+  restaurante.style.removeProperty("display");
+} else {
+  restaurante.style.display = "none";
+}
     });
   });
 

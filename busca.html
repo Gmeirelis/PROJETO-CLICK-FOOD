@@ -1,84 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>buscar</title>
+    <title>Buscar</title>
+
     <link rel="stylesheet" href="css/buscar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <a href="index.html">
-     <i class="fa-solid fa-arrow-left"></i>
-     </a>
-    <img src="icone/ChatGPT Image 3 de nov. de 2025, 09_25_16.png">
-     </header>
-     <main>
 
- 
-     <section  class="busca">
-      <div class="Buscar">
-        <input type="search" placeholder="peça a sua comida">
-      </div>
-      </section>
+<header>
+    <a href="index.html" class="voltar">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+    <img src="icone/ChatGPT Image 3 de nov. de 2025, 09_25_16.png" alt="Logo">
+</header>
 
-     <section class="cat">
-     
-        <div class="food">
-            <p>lanches</p>
-       <img src="img-busca/lanches.png">
+<main>
+
+    <section class="buscar">
+        <div class="buscar-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" placeholder="Buscar por restaurante" id="filtro">
         </div>
-
-        <div class="food" style="background-color: red;" id="desconto">
-            <p style="font-size: 15px;">Descontos</p>
-       <img src="img-busca/descontos.png">
-        </div>
-
-        <div class="food" style="background-color: brown">
-            <p style="font-size: 15px;">churrasco</p>
-       <img src="img-busca/churrasco.png">
-        </div>
-        <div class="food" style="background-color: blueviolet;">
-            <p>lanches</p>
-       <img src="img-busca/acai.png">
-        </div>
-
-         <section class="menu-geral">
-      <nav class="menu-inferior">
-
-        <a href="index.html" class="item ativo">
-          <i class="fa-solid fa-house"></i>
-          <span>inicio</span>
-        </a>
-
-        <a href="busca.html" class="item">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <span>buscar</span>
-        </a>
-
-        <a href="pedido.html" class="item">
-          <i class="fa-solid fa-list"></i>
-          <span>pedidos</span>
-        </a>
-
-        <a href="perfil.html" class="item">
-          <i class="fa-solid fa-user"></i>
-          <span>perfil</span>
-        </a>
-
-
-      </nav>
-      </div>
     </section>
-      
+
+    <section class="cat">
+
+        <div class="food">
+            <p>Lanches</p>
+            <img src="img-busca/lanches.png">
+        </div>
+
+        <div class="food red">
+            <p>Descontos</p>
+            <img src="img-busca/descontos.png">
+        </div>
+
+        <div class="food brown">
+            <p>Churrasco</p>
+            <img src="img-busca/churrasco.png">
+        </div>
+
+        <div class="food purple">
+            <p>Açaí</p>
+            <img src="img-busca/acai.png">
+        </div>
+
+    </section>
+
 </main>
 
+<!-- MENU FIXO -->
+<nav class="menu-inferior">
 
+    <a href="index.html" class="item">
+        <i class="fa-solid fa-house"></i>
+        <span>Início</span>
+    </a>
 
-     </section>
+    <a href="busca.html" class="item ativo">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Buscar</span>
+    </a>
 
+    <a href="pedido.html" class="item">
+        <i class="fa-solid fa-list"></i>
+        <span>Pedidos</span>
+    </a>
 
-    </main>
+    <a href="perfil.html" class="item">
+        <i class="fa-solid fa-user"></i>
+        <span>Perfil</span>
+    </a>
+
+</nav>
+
 </body>
 </html>

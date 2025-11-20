@@ -1,154 +1,157 @@
-
+/* RESET */
 * {
-  font-family: sans-serif;
   margin: 0;
   padding: 0;
- 
+  font-family: sans-serif;
 }
 
 body {
-  background-color: #ffffff;
+  background: #ffffff;
 }
-/* menu superior*/
-header{
+
+/* ============================
+   CABEÇALHO
+============================ */
+header {
   display: flex;
-    background-color:#ffffff;
-    padding-bottom: 50px;
-    justify-content: center;
-    
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+  gap: 20px;
 }
-header img{
-  position: relative;
+
+header img {
   width: 120px;
-  top:20px
 }
 
-header .fa-arrow-left{
-  position: relative;
-  right: 100px;
-  top:25px;
-  font-size: 30px;
-  color: black;
-
+.voltar i {
+  font-size: 28px;
+  color: #000;
 }
-/* busca*/
-.busca{
+
+/* ============================
+   BARRA DE BUSCA
+============================ */
+.buscar {
   display: flex;
   justify-content: center;
-}
-.busca input{
-  position: relative;
-  font-size: 15px;
-  border-radius: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 10px;
-  padding-top: 10px;
- top: 20px;
-}
-/* categoria*/
-.cat{
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 80px;
-    flex-direction: row;
-    justify-content: center;
+  margin-top: 20px;
 }
 
-.food{
-    display: flex;
-    justify-content: center;
-    background-color: orange;
-    margin-left: 30px;
-   padding-left: 50px;
-   border-radius: 20px;
-   
+.buscar-box {
+  background: #f3f3f3;
+  padding: 12px 18px;
+  border-radius: 25px;
+  width: 85%;
+  max-width: 400px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-
-.food img{
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
-}
-.food p{
-    position: relative;
-  top: 40px;
-  right: 30px;
+.buscar-box i {
   font-size: 20px;
-  color: white;
- 
+  color: #666;
 }
-/* menu inferior */
 
+.buscar-box input {
+  border: none;
+  background: none;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+}
+
+/* ============================
+   CATEGORIAS
+============================ */
+.cat {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 90px;
+}
+
+.food {
+  width: 150px;
+  height: 150px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px;
+  border-radius: 20px;
+
+  background: #ff8c00;
+  color: white;
+
+  transition: 0.2s ease;
+}
+
+.food:hover {
+  transform: scale(1.05);
+}
+
+/* Cores individuais */
+.food.red { background: #e63939; }
+.food.brown { background: #8b4513; }
+.food.purple { background: #7a29d6; }
+
+.food img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.food p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ============================
+   MENU INFERIOR
+============================ */
 .menu-inferior {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+
   background: #d47f39;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #ccc;
+
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  padding: 8px 0;
-  z-index: 1000;
+  padding: 10px 0;
+
+  z-index: 999;
 }
 
 .menu-inferior .item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-decoration: none;
-  color: #666;
-  font-size: 12px;
-  transition: color 0.2s;
-}
-
-.menu-inferior .item img {
-  width: 24px;
-  height: 24px;
-  margin-bottom: 3px;
-}
-
-.menu-inferior .item.ativo,
-.menu-inferior .item:hover {
-  color: #ff7b00; /* laranja estilo ClickFood */
-}
-
-.fa-house {
-  color: rgb(255, 255, 255); /* muda a cor do ícone */
-  font-size: 25px; /* muda o tamanho */
-}
-.fa-magnifying-glass{
-  font-size: 25px;
-  color: rgb(255, 255, 255) ;
-}
-.fa-list{
-  color: white;
-  font-size: 25px;
-}
-
-.fa-user{
-  color: white;
-  font-size: 25px;
-}
-span{
-  color: #d7d5d5;
-  font-size: 15px;
-}
-
-.restaurantes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.restaurante {
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 150px;
-  transition: 0.3s;
+}
+
+.menu-inferior .item i {
+  font-size: 25px;
+}
+
+.menu-inferior .item span {
+  font-size: 14px;
+  color: #eee;
+}
+
+.menu-inferior .item.ativo i,
+.menu-inferior .item:hover i {
+  color: #ffe3c2;
 }

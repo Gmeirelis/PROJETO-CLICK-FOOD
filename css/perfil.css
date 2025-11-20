@@ -1,64 +1,61 @@
-
+/* Reset básico */
 * {
-  font-family: sans-serif;
   margin: 0;
   padding: 0;
- 
+  font-family: sans-serif;
 }
 
-header{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding-bottom: 30px;
-    background-color: rgb(255, 255, 255);
-}
-.perfil{
-    display: flex;
-    gap: 20px;
-    position: relative;
-    top: 20px;
-
+/* ===========================
+   CABEÇALHO / PERFIL
+=========================== */
+header {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  padding: 30px 0;
 }
 
-.perfil img{
-    width: 80px;
-    height: 80px;
+.perfil {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
-.perfil h1{
-    position: relative;
-    font-size: 20px;
-    top:20px;
-
+.perfil img {
+  width: 80px;
+  height: 80px;
 }
 
-/*configuração*/
+.perfil h1 {
+  font-size: 20px;
+}
+
+/* ===========================
+   CONFIGURAÇÕES
+=========================== */
 
 .configuracao {
-  margin-top: 100px;
+  margin-top: 80px;
   display: flex;
-  justify-content: left;
-  margin-bottom: 50px;
+  justify-content: flex-start;
+  margin-bottom: 80px;
 }
 
 .dados {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  width: 100%;
 }
 
 .config {
   display: flex;
   align-items: center;
   gap: 15px;
-  padding-left: 50px;
+  width: 100%;
+  padding: 20px 50px;
+  border-bottom: 1px solid #b5b5b5;
   cursor: pointer;
-  transition: 0.2s ease;
-}
-
-.config:hover {
-  color: #e98811;
+  transition: 0.2s;
 }
 
 .config i {
@@ -66,21 +63,26 @@ header{
 }
 
 .config p {
-  font-size: 25px;
-  margin: 0;
+  font-size: 22px;
 }
 
-.config {
-  width: 90vw;
-  border-bottom: 1px solid rgb(181, 181, 181);
-  padding: 20px;
-  text-align: center;
-  margin: 0; /* evita o espaço lateral */
-  margin-bottom: 20px;
+.config:hover {
+  color: #e98811;
 }
 
+/* torna toda a linha clicável */
+.config a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
 
-/*menu inferior*/
+/* ===========================
+   MENU INFERIOR
+=========================== */
 
 .menu-inferior {
   position: fixed;
@@ -101,56 +103,21 @@ header{
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: #666;
+  color: #fff;
   font-size: 12px;
-  transition: color 0.2s;
 }
 
-.menu-inferior .item img {
-  width: 24px;
-  height: 24px;
+.menu-inferior .item i {
+  font-size: 25px;
   margin-bottom: 3px;
+}
+
+.menu-inferior .item span {
+  font-size: 14px;
+  color: #eee;
 }
 
 .menu-inferior .item.ativo,
 .menu-inferior .item:hover {
-  color: #ff7b00; /* laranja estilo ClickFood */
+  color: #ffd3a2;
 }
-
-.fa-house {
-  color: rgb(255, 255, 255); /* muda a cor do ícone */
-  font-size: 25px; /* muda o tamanho */
-}
-.fa-magnifying-glass{
-  font-size: 25px;
-  color: rgb(255, 255, 255) ;
-}
-.fa-list{
-  color: white;
-  font-size: 25px;
-}
-
-.fa-user{
-  color: white;
-  font-size: 25px;
-}
-
-span{
-  color: #d7d5d5;
-  font-size: 15px;
-}
-
-.restaurantes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.restaurante {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 150px;
-  transition: 0.3s;
-}
-
