@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #e99d0e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.login {
+    background-color: #fff;
+    width: 100%;
+    max-width: 380px;
+    padding: 50px 35px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.entrar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.entrar h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.entrar input {
+    height: 40px;
+    border: 1px solid #c5c5c5;
+    border-radius: 6px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.btn-entrar {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #ff9900;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-entrar:hover {
+    background-color: #e38700;
+}
+
+.cadastro {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+}
+
+.cadastro a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+}
+
+.cadastro a:hover {
+    color: #e38700;
+}
+
+/* BOTÃO GOOGLE */
+.google-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    background-color: #eeeeee;
+    color: #444;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.google-login i {
+    font-size: 18px;
+    color: #db4437;
+}
+
+.google-login:hover {
+    background-color: #d6d6d6;
+}
+
+/* ----------------------------- */
+/*           MOBILE              */
+/* ----------------------------- */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 20px;
+        background-color: #e99d0e;
+    }
+
+    .login {
+        padding: 40px 25px;
+        max-width: 100%;
+        border-radius: 15px;
+    }
+
+    .entrar {
+        gap: 20px;
+    }
+
+    .entrar h1 {
+        font-size: 26px;
+    }
+
+    .entrar input {
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .google-login {
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    .btn-entrar {
+        padding: 12px;
+        font-size: 17px;
+    }
+
+    .cadastro {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        font-size: 12px;
+    }
+}
