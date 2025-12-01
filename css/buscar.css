@@ -124,7 +124,8 @@ header img {
   left: 0;
   width: 100%;
 
-  background: #d47f39;
+ background: #ff8c00;
+  display: flex;
   border-top: 1px solid #ccc;
 
   display: flex;
@@ -143,11 +144,11 @@ header img {
 }
 
 .menu-inferior .item i {
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .menu-inferior .item span {
-  font-size: 14px;
+  font-size: 13px;
   color: #eee;
 }
 
