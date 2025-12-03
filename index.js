@@ -62,6 +62,15 @@ tempobtn.addEventListener("click", () => {
   menuDistancia.style.display = "none"; // fecha o outro menu
 });
 
+
+
+// abrir/fechar avaliaçao 
+s
+
+
+
+
+
 // Clique nas opções
 document.querySelectorAll(".dropdown-menu input, .tempo-filtro input")
   .forEach(caixa => {
