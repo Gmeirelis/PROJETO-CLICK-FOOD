@@ -40,33 +40,46 @@ filtro.addEventListener("input", function () {
 });
 
 /***************filtros******** */
-
-
- const btnDistancia = document.getElementById("distancia-btn");
+const btnDistancia = document.getElementById("distancia-btn");
 const menuDistancia = document.getElementById("menu-distancia");
 
-// abrir / fechar o menu
+const tempobtn = document.getElementById("tempo-btn");
+const menuFiltro = document.getElementById("menu-filtro");
+
+// Abrir/fechar DISTÂNCIA
 btnDistancia.addEventListener("click", () => {
   menuDistancia.style.display =
     menuDistancia.style.display === "block" ? "none" : "block";
+
+  menuFiltro.style.display = "none"; // fecha o outro menu
 });
 
-// clicar em uma opção
-menuDistancia.querySelectorAll("input").forEach(caixa => {
-  caixa.addEventListener("change", () => {
-    console.log("Marcado:", caixa.value);
+// Abrir/fechar TEMPO
+tempobtn.addEventListener("click", () => {
+  menuFiltro.style.display =
+    menuFiltro.style.display === "block" ? "none" : "block";
+
+  menuDistancia.style.display = "none"; // fecha o outro menu
+});
+
+// Clique nas opções
+document.querySelectorAll(".dropdown-menu input, .tempo-filtro input")
+  .forEach(caixa => {
+    caixa.addEventListener("change", () => {
+      console.log("Marcado:", caixa.value);
+    });
   });
-});
 
-// fechar ao clicar fora
+// Fechar menus ao clicar fora
 document.addEventListener("click", (e) => {
-  if (!e.target.closest("#distancia-btn") && !e.target.closest("#menu-distancia")) {
-    menuDistancia.style.display = "none";
-  }
+
+  const clicouDistancia = e.target.closest("#distancia-btn") || e.target.closest("#menu-distancia");
+  const clicouTempo = e.target.closest("#tempo-btn") || e.target.closest("#menu-filtro");
+
+  if (!clicouDistancia) menuDistancia.style.display = "none";
+  if (!clicouTempo) menuFiltro.style.display = "none";
+
 });
-
-
-
 
 
  

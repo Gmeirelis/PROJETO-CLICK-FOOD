@@ -223,7 +223,6 @@ body {
 }
 
 .dropdown-menu input[type="checkbox"] {
-  display: none;
   width: 16px;
   height: 16px;
   cursor: pointer;
@@ -232,6 +231,37 @@ body {
   display: none;
   margin-right: 150px;
 }
+/*filtro de tempo*/
+.tempo-filtro label.opcao{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.tempo-filtro label.opcao:hover{
+  background: #f2f2f2;
+}
+
+.tempo-filtro input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.tempo-filtro{
+  display: none;
+  margin-right: 150px;
+}
+
+
+
+
+
+
+
+
 
 /* ------------------- RESTAURANTES ------------------- */
 .titulo-secao {
