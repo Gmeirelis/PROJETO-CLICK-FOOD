@@ -82,24 +82,38 @@
   </div>
 </section>
 
-    <!-- FILTROS -->
-    <section class="filtros">
-      <div class="filtro-menu">
-        <button>Distância</button>
-        <button id="btnTempo">Tempo</button>
-        <button>Avaliação</button>
-        <button>Promoção</button>
-      </div>
+<i class="fas fa-filter"  style="font-size: 10px;">filtros</i>
 
-      <!-- Dropdown tempo -->
-      <div class="dropdown" id="dropTempo">
-        <button data-tempo="20">Até 20 min</button>
-        <button data-tempo="25">Até 25 min</button>
-        <button data-tempo="35">Até 35 min</button>
-        <button data-tempo="40">Até 40 min</button>
-        <button data-tempo="todos">Mostrar todos</button>
-      </div>
-    </section>
+
+    <!-- FILTROS -->
+   <section class="filtros">
+  <div class="filtro-menu">
+    <button id="distancia-btn">Distância</button>
+    <button>Tempo</button>
+    <button>Avaliação</button>
+    <button>Promoção</button>
+  </div>
+
+  <div class="dropdown-menu" id="menu-distancia">
+  <label class="opcao">
+    <input type="checkbox" value="10-20">
+    10km – 20km
+  </label>
+
+  <label class="opcao">
+    <input type="checkbox" value="20-30">
+    20km – 30km
+  </label>
+
+  <label class="opcao">
+    <input type="checkbox" value="5-10">
+    5km – 10km
+  </label>
+</div>
+
+</section>
+
+
 
     <!-- LISTA DE RESTAURANTES -->
     <h1 class="titulo-secao">Lojas</h1>

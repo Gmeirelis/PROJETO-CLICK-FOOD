@@ -39,6 +39,34 @@ filtro.addEventListener("input", function () {
   });
 });
 
+/***************filtros******** */
+
+
+  const btnDistancia = document.getElementById("distancia-btn");
+  const menuDistancia = document.getElementById("menu-distancia");
+
+  // abrir / fechar o menu
+  btnDistancia.addEventListener("click", () => {
+    menuDistancia.style.display =
+      menuDistancia.style.display === "block" ? "none" : "block";
+  });
+
+  // clicar em uma opção
+menuDistancia.querySelectorAll("input").forEach(caixa => {
+  caixa.addEventListener("change", () => {
+    console.log("Marcado:", caixa.value);
+  });
+});
+
+
+  // fechar ao clicar fora
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".filtros")) {
+      menuDistancia.style.display = "none";
+    }
+  });
+
+
 
 
  

@@ -165,6 +165,12 @@ body {
 
 
 /* ------------------- FILTROS ------------------- */
+
+ .fa-filter{
+  color: #484746;
+  margin-left: 10px;
+ }
+
 .filtros {
   padding: 10px 20px;
 }
@@ -188,25 +194,41 @@ body {
   background: #ff8c00;
   color: white;
 }
-
-.dropdown {
-  display: none;
-  flex-direction: column;
-  margin-top: 10px;
+.filtros {
+  position: relative;
+  padding: 20px;
 }
 
-.dropdown button {
-  padding: 8px;
-  margin: 3px 0;
-  background: #f5f5f5;
-  border-radius: 12px;
-  border: 1px solid #ccc;
+
+.filtro-menu button {
+  padding: 10px 15px;
+  background: #f6ac00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-right: 8px;
   cursor: pointer;
 }
+.dropdown-menu label.opcao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 15px;
+}
 
-.dropdown button:hover {
-  background: #ff7b00;
-  color: #fff;
+.dropdown-menu label.opcao:hover {
+  background: #f2f2f2;
+}
+
+.dropdown-menu input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.dropdown-menu{
+  margin-right: 150px;
 }
 
 /* ------------------- RESTAURANTES ------------------- */
