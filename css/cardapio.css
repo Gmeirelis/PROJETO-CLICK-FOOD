@@ -1,0 +1,265 @@
+/* ===============================
+   RESET / BASE
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+/* ===============================
+   CONTAINER PRINCIPAL
+================================ */
+
+.restaurante {
+    background-color: white;
+    position: relative;
+    bottom: 60px;
+    padding: 0 0 20px 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+/* ===============================
+   IMAGEM DE CAPA
+================================ */
+
+.img-restaurante {
+    width: 440px;
+    height: 300px;
+    object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+  /* estilos para desktop */
+   
+  .img-restaurante {
+    width: 100%;
+    max-width: 1600px;
+    aspect-ratio: 16 / 9;   /* proporção padrão de banner */
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+}
+
+
+/* ===============================
+   BLOCO RESTAURANTE
+================================ */
+
+.container-restaurante {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 50px;
+    padding-top: 50px;
+   
+}
+
+.container-restaurante img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+}
+
+.container-restaurante h2 {
+    font-size: 25px;
+}
+
+.container-restaurante p {
+    color: rgb(67, 66, 66);
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+@media (min-width: 1024px) {
+/*desktop restaurante e status */
+.restaurante{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 150px;
+    padding: 50px;
+    border-radius: 50px 50px 0px 0px;
+}
+.container-restaurante img {
+    position: relative;
+    bottom: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+.container-restaurante h2 {
+    font-size: 35px;
+}
+.container-restaurante p{
+    font-size: 20px;
+}
+
+.container-status{
+    
+    position: relative;
+    top: 80px;
+}
+
+}
+
+
+/* ===============================
+   STATUS DO RESTAURANTE
+================================ */
+
+.container-status {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.container-status p {
+    font-size: 15px;
+    color: rgb(111, 110, 110);
+}
+
+/* ===============================
+   ÍCONES + TEXTO
+================================ */
+
+.container-status p,
+.titulo p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+@media (min-width: 1024px){
+ 
+    .container-status p {
+    font-size: 20px;
+    color: rgb(111, 110, 110);
+}
+}
+
+/* ===============================
+   ESTADO: ABERTO
+================================ */
+
+.container-status .aberto {
+    color: green;
+    font-weight: bold;
+}
+
+.container-status .aberto i {
+    color: green;
+}
+
+/* ===============================
+ CATEGORIA-FILTRO
+================================ */
+.container-categorias {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding: 10px;
+  background-color: white;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.container-categorias::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+.container-categorias a {
+  text-decoration: none;
+  color: rgb(218, 160, 11);
+  border-bottom: 2px solid rgb(218, 160, 11);
+  padding: 10px;
+ 
+}
+
+
+.container-categorias a:hover{
+   background-color: rgb(224, 142, 28);
+   color: white;
+}
+
+
+
+
+
+@media (min-width: 1024px){
+/* desktop filtro*/
+.container-categorias{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.container-categorias a{
+    text-decoration: none;
+    color: rgb(218, 160, 11);
+    border: 1px solid rgb(218, 160, 11);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+
+}
+ 
+
+/* ===============================
+CARDAPIO
+================================ */
+
+.cardapio{
+    background-color: white;
+    padding: 20px;
+    padding-top: 50px;
+  
+}
+/*global cardapio*/
+.cardapio-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.cardapio-container h1{
+    font-size: 25px;
+    color: rgba(72, 72, 72, 0.645);
+}
+.cardapio-container img {
+      width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+.cardapio-container h2{
+    font-size: 17px;
+}
+.cardapio-container p{
+    font-size: 10px;
+}
+.cardapio-container h3{
+    position: relative;
+    top: 20px;
+    color: green;
+
+}
+.cardapio-item {
+    display: flex;
+    gap: 20px;
+    padding: 35px;
+    border: 1px solid rgba(125, 124, 124, 0.492);
+    border-radius: 10px;
+}

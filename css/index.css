@@ -327,6 +327,11 @@ body {
 font-size: 10px;
 }
 
+.restaurante a{
+  text-decoration: none;
+  color: black;
+}
+
 
 /* ------------------- MENU INFERIOR ------------------- */
 .menu-inferior {
