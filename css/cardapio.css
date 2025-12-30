@@ -175,6 +175,13 @@ body {
   scroll-snap-type: x mandatory;
 }
 
+.container-categorias{
+    position: relative;
+    top: 30px;
+}
+
+
+
 .container-categorias::-webkit-scrollbar {
   display: none;
 }
@@ -184,8 +191,8 @@ body {
 .container-categorias a {
   text-decoration: none;
   color: rgb(218, 160, 11);
-  border-bottom: 2px solid rgb(218, 160, 11);
   padding: 10px;
+  border-bottom: 1px solid rgb(224, 142, 28);;
  
 }
 
@@ -193,6 +200,7 @@ body {
 .container-categorias a:hover{
    background-color: rgb(224, 142, 28);
    color: white;
+   
 }
 
 
@@ -239,6 +247,11 @@ CARDAPIO
     font-size: 25px;
     color: rgba(72, 72, 72, 0.645);
 }
+
+.cardapio-container h1{
+ border-bottom: 1px solid rgba(0, 0, 0, 0.263);
+ padding: 50px 0px 50px 0px;
+}
 .cardapio-container img {
       width: 100px;
     height: 100px;
@@ -260,6 +273,6 @@ CARDAPIO
     display: flex;
     gap: 20px;
     padding: 35px;
-    border: 1px solid rgba(125, 124, 124, 0.492);
-    border-radius: 10px;
+   border-bottom: 1px solid rgba(28, 27, 27, 0.108);
+   
 }
