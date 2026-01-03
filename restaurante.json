@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "nome": "Nam Nam Korean",
+    "imagem": "img-restaurante/asiatico.png",
+    "categoria": "Japonesa",
+    "nota": 5.0,
+    "tempo": "25–35 min",
+    "link": "cardapio.html"
+  },
+  {
+    "id": 2,
+    "nome": "Burg Delicious",
+    "imagem": "img-restaurante/hamburg.png",
+    "categoria": "Lanches",
+    "nota": 4.5,
+    "tempo": "30–40 min",
+    "link": "cardapio-burg.html"
+  },
+  {
+    "id": 3,
+    "nome": "Chef Restaurante",
+    "imagem": "img-restaurante/resturante-comida-simples.png",
+    "categoria": "Lanches",
+    "nota": 4.5,
+    "tempo": "30–40 min",
+    "link": null
+  },
+  {
+    "id": 4,
+    "nome": "Reino Acai",
+    "imagem": "img-restaurante/acai.png",
+    "categoria": "Acai",
+    "nota": 4.5,
+    "tempo": "30–40 min",
+    "link": "cardapioacai.html"
+  },
+  {
+    "id": 5,
+    "nome": "Sorveteria",
+    "imagem": "img-restaurante/sorveteria.png",
+    "categoria": "Sorvetes",
+    "nota": 4.5,
+    "tempo": "20–30 min",
+    "link": null
+  },
+  {
+    "id": 6,
+    "nome": "Arlene Salgados",
+    "imagem": "img-restaurante/salgado.png",
+    "categoria": "Salgados",
+    "nota": 4.5,
+    "tempo": "30–40 min",
+    "link": null
+  }
+]
