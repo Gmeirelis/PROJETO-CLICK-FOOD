@@ -66,7 +66,7 @@ document.addEventListener("click", (e) => {
   /*********filtro resturante API **********************************/
  let restaurantes = []
 
- fetch('./restaurante.json').then(Response => Response.json()).then(dados =>{
+ fetch('restaurante.json').then(Response => Response.json()).then(dados =>{
 
     restaurantes = dados 
     renderizarRestaurantes(restaurantes);
