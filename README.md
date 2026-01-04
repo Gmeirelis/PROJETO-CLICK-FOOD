@@ -54,7 +54,7 @@ Clone o repositório: https://github.com/Gmeirelis/PROJETO-CLICK-FOOD.git
 
 / 🔗 GitHub: https://github.com/seu-usuario
 
-/ 🔗 LinkedIn: (opcional)
+/ 🔗 LinkedIn: www.linkedin.com/in/guimeireleslima
 
 
 
