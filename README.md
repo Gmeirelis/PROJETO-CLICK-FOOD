@@ -14,9 +14,9 @@ O Click iFood é um projeto de aplicação web inspirado no funcionamento do iFo
 
 # Objetivo do projeto
 
-Praticar estruturação de projetos Front-end
-Simular aplicações do mundo real
-Trabalhar manipulação de dados
+- Praticar estruturação de projetos Front-end
+- Simular aplicações do mundo real
+- Trabalhar manipulação de dados
 
 
 
