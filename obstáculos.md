@@ -11,8 +11,8 @@ No ambiente de desenvolvimento, utilizando o VS Code com Live Server, a aplicaç
 - O navegador ao acessar via GitHub Pages (Linux) é case sensitive.
 - Havia inconsistência entre o nome do arquivo e o caminho utilizado no código, por exemplo:
 
-  -fetch("Restaurante.json")
-  -restaurante.json
+  - fetch("Restaurante.json")
+  - restaurante.json
   
 # Solução
 
