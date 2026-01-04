@@ -11,8 +11,8 @@ O Click iFood é um projeto de aplicação web inspirado no funcionamento do iFo
  - Simulação de aplicação de delivery
 
 # Demostração
-
-![Tela inicial](./screenshots/home.png)
+  Deploy:
+ (https://gmeirelis.github.io/PROJETO-CLICK-FOOD/)
 
 
 # Objetivo do projeto
