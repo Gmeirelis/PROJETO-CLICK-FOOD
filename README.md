@@ -52,7 +52,7 @@ Clone o repositório: https://github.com/Gmeirelis/PROJETO-CLICK-FOOD.git
  Guilherme meireles lima
 -Desenvolvidor front-end
 
-/ 🔗 GitHub: https://github.com/seu-usuario
+/ 🔗 GitHub: [https://github.com/seu-usuario](https://github.com/Gmeirelis)
 
 / 🔗 LinkedIn: www.linkedin.com/in/guimeireleslima
 
