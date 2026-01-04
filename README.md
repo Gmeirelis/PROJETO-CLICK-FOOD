@@ -37,7 +37,7 @@ O Click iFood é um projeto de aplicação web inspirado no funcionamento do iFo
 
 # Como Executar o Projeto
 
-Clone o repositório:
+Clone o repositório: https://github.com/Gmeirelis/PROJETO-CLICK-FOOD.git
 
 
 # Melhorias Futuras
