@@ -3,12 +3,12 @@ O Click iFood é um projeto de aplicação web inspirado no funcionamento do iFo
 
 # Funcionalidades
 
-Listagem de restaurantes
-Exibição de categoria, tempo de entrega e avaliação
-Navegação para página de cardápio
-Interface responsiva
-Estrutura organizada de dados (JSON)
-Simulação de aplicação de delivery
+ - Listagem de restaurantes
+ - Exibição de categoria, tempo de entrega e avaliação
+ - Navegação para página de cardápio
+ - Interface responsiva
+ - Estrutura organizada de dados (JSON)
+ - Simulação de aplicação de delivery
 
 # Demostração
 
