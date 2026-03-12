@@ -1,0 +1,1 @@
+ <button onclick="limparCarrinho()" id="btn-apagar" class="btn-limpar">Apagar pedidos</button>

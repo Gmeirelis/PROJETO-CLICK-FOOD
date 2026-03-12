@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus pedidos</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/pedidos.css">
+      <link rel="stylesheet" href="css/menu-inferior.css">
+      <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+    <header class="header">
+    <img class="logo-img" src="icone/ChatGPT Image 3 de nov. de 2025, 09_25_16.png">
+    <nav class="menu">
+      <a href="#">Início</a>
+      <a href="#">Parceiros</a>
+      <a href="#">Sobre</a>
+    </nav>
+  </header>
+    
+<main>
+
+     <div class="status">
+    <h4 class="titulos" ></h4>
+    </div>
+    
+<div class="container">   
+        
+<div id="lista" class="lista-pedidos"></div>
+   <button onclick="limparCarrinho()" id="btn-apagar" class="btn-limpar">Apagar pedidos</button>
+
+</div>
+
+
+
+<section class="container-resumo">
+
+  <div class="resumo">
+    <h4>Total com entrega</h4>
+    <div id="total" class="total-pedidos"></div>
+  </div>
+
+  <button class="continuar">Finalizar compras</button>
+
+</section>
+
+    
+<!-- MENU FIXO -->
+<nav class="menu-inferior">
+
+    <a href="index.html" class="item">
+        <i class="fa-solid fa-house"></i>
+        <span>Início</span>
+    </a>
+
+    <a href="busca.html" class="item ativo">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Buscar</span>
+    </a>
+
+    <a href="pedido.html" class="item">
+        <i class="fa-solid fa-list"></i>
+        <span>Pedidos</span>
+    </a>
+
+    <a href="perfil.html" class="item">
+        <i class="fa-solid fa-user"></i>
+        <span>Perfil</span>
+    </a>
+
+</nav>
+
+</main>
+
+
+ <script src="pedidos.js"></script>   
+</body>
+</html>

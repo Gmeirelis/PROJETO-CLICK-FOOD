@@ -7,7 +7,7 @@
     <title>cardapio</title>
     <link rel="stylesheet" href="css/cardapio.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
+     <link rel="stylesheet" href="css/menu-inferior.css" />
 </head>
 
 <body>
@@ -60,177 +60,138 @@
             </div>
         </section>
 
-        <section class=" cardapio">
+       <section class="cardapio">
 
-          <div class="cardapio-container">
+  <div class="cardapio-container">
 
-              <h1>combo</h1>
-           
-              <div class="cardapio-item">
-                <img src="img-restaurante/combo-japonesa.jpg" alt="">
+    <!-- COMBOS -->
+    <div class="categoria" id="combos">
+      <h1>Combos</h1>
 
-                <div class="combo-titulo">
-                <h2>Combo Tradicional Japonês</h2>
-                <p>Salmão e atum frescos em uma seleção especial de sushis, sashimis e hot rolls</p>
-                <h3>R$ 25,00</h3>
-               </div>
-              </div>
+      <div class="cardapio-item">
+        <img src="img-restaurante/combo-japonesa.jpg" alt="Combo Tradicional Japonês">
+        <div class="cardapio-info">
+          <h2>Combo Tradicional Japonês</h2>
+          <p>Salmão e atum frescos em seleção especial de sushis e sashimis.</p>
+          <h3>R$ 25,00</h3>
+            <button onclick="adicionarAoCarrinho(200)">+</button>
+        </div>
+      </div>
 
-              <div class="cardapio-item">
-                <img src="img-restaurante/combo-japonesa-2.jpg" alt="">
+      <div class="cardapio-item">
+        <img src="img-restaurante/combo-japonesa-2.jpg" alt="Combo Samurai">
+        <div class="cardapio-info">
+          <h2>Combo Samurai</h2>
+          <p>Seleção premium com hot rolls e sashimis especiais.</p>
+          <h3>R$ 25,00</h3>
+            <button onclick="adicionarAoCarrinho(201)">+</button>
+        </div>
+      </div>
 
-                <div class="combo-titulo">
-                <h2>Combo Samurai</h2>
-                <p>Salmão e atum frescos em uma seleção especial de sushis, sashimis e hot rolls</p>
-                <h3>R$ 25,00</h3>
-               </div>
-              </div>
-             
-              <div class="cardapio-item">
-                <img src="img-restaurante/combo-japonesa-3.jpg" alt="">
+      <div class="cardapio-item">
+        <img src="img-restaurante/combo-japonesa-3.jpg" alt="Combo Sensações do Oriente">
+        <div class="cardapio-info">
+          <h2>Combo Sensações do Oriente</h2>
+          <p>Experiência completa com variedade oriental.</p>
+          <h3>R$ 50,00</h3>
+            <button onclick="adicionarAoCarrinho(202)">+</button>
+        </div>
+      </div>
 
-                <div class="combo-titulo">
-                <h2>CCombo Sensações do Oriente</h2>
-                <p>Salmão e atum frescos em uma seleção especial de sushis, sashimis e hot rolls</p>
-                <h3>R$ 50,00</h3>
-               </div>
-              </div>
-             <div class="cardapio-item">
-                <img src="img-restaurante/combo-japonesa-4.jpg" alt="">
+      <div class="cardapio-item">
+        <img src="img-restaurante/combo-japonesa-4.jpg" alt="Combo Imperial">
+        <div class="cardapio-info">
+          <h2>Combo Imperial</h2>
+          <p>Seleção especial da casa com ingredientes premium.</p>
+          <h3>R$ 78,00</h3>
+            <button onclick="adicionarAoCarrinho(203)">+</button>
+        </div>
+      </div>
+    </div>
 
-                <div class="combo-titulo">
-                <h2>Combo Imperial</h2>
-                <p>Salmão e atum frescos em uma seleção especial de sushis, sashimis e hot rolls</p>
-                <h3>R$ 78,00</h3>
-               </div>
-              </div>
+    <!-- SUSHI -->
+    <div class="categoria" id="sushi">
+      <h1>Sushi</h1>
 
-              <h1>sushi</h1>
+      <div class="cardapio-item">
+        <img src="img-restaurante/sushi.jpg" alt="Sushi Hot Roll">
+        <div class="cardapio-info">
+          <h2>Sushi Hot Roll</h2>
+          <p>Hot roll crocante com recheio especial.</p>
+          <h3>R$ 35,00</h3>
+            <button onclick="adicionarAoCarrinho(204)">+</button>
+        </div>
+      </div>
 
-              
-                   <div class="cardapio-item">
-                <img src="img-restaurante/sushi.jpg" alt="">
+      <div class="cardapio-item">
+        <img src="img-restaurante/sushi-3.jpg" alt="Sushi com Camarão">
+        <div class="cardapio-info">
+          <h2>Sushi com Camarão</h2>
+          <p>Sushi fresco com camarão selecionado.</p>
+          <h3>R$ 35,00</h3>
+            <button onclick="adicionarAoCarrinho(205)">+</button>
+        </div>
+      </div>
+    </div>
 
-                <div class="sushi-titulo">
-                <h2> sushi hot roll</h2>
-                <p>Salmão e atum frescos em uma seleção especial de sushis, sashimis e hot rolls</p>
-                <h3>R$35,00</h3>
-               </div>
-              </div>
-               
-                   <div class="cardapio-item">
-                <img src="img-restaurante/sushi-3.jpg" alt="">
+    <!-- LAMEN -->
+    <div class="categoria" id="lamen">
+      <h1>Lamen</h1>
 
-                <div class="sushi-titulo">
-                <h2> sushi com camarão</h2>
-                <p>Salmão e atum frescos em uma seleção especial de sushis, sashimis e hot rolls</p>
-                <h3>R$35,00</h3>
-               </div>
-              </div>
-                
-                   <div class="cardapio-item">
-                <img src="img-restaurante/sushi-2jpg.jpg" alt="">
+      <div class="cardapio-item">
+        <img src="img-restaurante/lamem-2.jpg" alt="Lamen Caprichado">
+        <div class="cardapio-info">
+          <h2>Lamen Caprichado</h2>
+          <p>Caldo encorpado com ingredientes especiais.</p>
+          <h3>R$ 35,00</h3>
+            <button onclick="adicionarAoCarrinho(206)">+</button>
+        </div>
+      </div>
 
-                <div class="sushi-titulo">
-                <h2> homemade sushi</h2>
-                <p>Salmão e atum frescos em uma seleção especial de sushis, sashimis e hot rolls</p>
-                <h3>R$35,00</h3>
-               </div>
-              </div>
+      <div class="cardapio-item">
+        <img src="img-restaurante/lamen.jpg" alt="Lamen Simples">
+        <div class="cardapio-info">
+          <h2>Lamen Simples</h2>
+          <p>Tradicional e saboroso.</p>
+          <h3>R$ 35,00</h3>
+            <button onclick="adicionarAoCarrinho(207)">+</button>
+        </div>
+      </div>
+    </div>
 
-                   <div class="cardapio-item">
-                <img src="img-restaurante/sushi-4.jpg" alt="">
+    <!-- BEBIDAS -->
+    <div class="categoria" id="bebidas">
+      <h1>Bebidas</h1>
 
-                <div class="sushi-titulo">
-                <h2> sushi salmão</h2>
-                <p>Salmão e atum frescos em uma seleção especial de sushis, sashimis e hot rolls</p>
-                <h3>R$35,00</h3>
-               </div>
-              </div>
-               
-              <h1>Lamen</h1>
+      <div class="cardapio-item">
+        <img src="img-restaurante/coca.jpg" alt="Coca-Cola">
+        <div class="cardapio-info">
+          <h2>Coca-Cola</h2>
+          <p>Refrigerante lata 350ml.</p>
+          <h3>R$ 8,00</h3>
+            <button onclick="adicionarAoCarrinho(208)">+</button>
+        </div>
+      </div>
 
-              <div class="cardapio-item">
-                <img src="img-restaurante/lamem-2.jpg" alt="">
+      <div class="cardapio-item">
+        <img src="img-restaurante/cha.jpg" alt="Chá Gelado">
+        <div class="cardapio-info">
+          <h2>Chá Gelado</h2>
+          <p>Refrescante e natural.</p>
+          <h3>R$ 10,00</h3>
+            <button onclick="adicionarAoCarrinho(209)">+</button>
+        </div>
+      </div>
+    </div>
 
-                <div class="lamen-titulo">
-                <h2> Lamen caprichado</h2>
-                <p>Salmão e atum frescos em uma seleção especial de sushis, sashimis e hot rolls</p>
-                <h3>R$35,00</h3>
-               </div>
-              </div>
+  </div>
 
-                <div class="cardapio-item">
-                <img src="img-restaurante/lamen.jpg" alt="">
-
-                <div class="lamen-titulo">
-                <h2> lamen simples</h2>
-                <p>Salmão e atum frescos em uma seleção especial de sushis, sashimis e hot rolls</p>
-                <h3>R$35,00</h3>
-               </div>
-              </div>
-
-              
-                <div class="cardapio-item">
-                <img src="img-restaurante/lamem3.jpg" alt="">
-
-                <div class="lamen-titulo">
-                <h2> lamen extra big</h2>
-                <p>Salmão e atum frescos em uma seleção especial de sushis, sashimis e hot rolls</p>
-                <h3>R$35,00</h3>
-               </div>
-              </div>
-             <h1>Bebidas</h1>
-              
-              <div class="cardapio-item">
-                <img src="img-restaurante/agua.jpg" alt="">
-
-                <div class="lamen-titulo">
-                <h2> lamen extra big</h2>
-                <p>Salmão e atum frescos em uma seleção especial de sushis, sashimis e hot rolls</p>
-                <h3>R$35,00</h3>
-               </div>
-              </div>
-
-               <div class="cardapio-item">
-                <img src="img-restaurante/coca.jpg" alt="">
-
-                <div class="lamen-titulo">
-                <h2> coca-cola </h2>
-                <p>Salmão e atum frescos em uma seleção especial de sushis, sashimis e hot rolls</p>
-                <h3>R$35,00</h3>
-               </div>
-              </div>
-               <div class="cardapio-item">
-                <img src="img-restaurante/cha.jpg" alt="">
-
-                <div class="lamen-titulo">
-                <h2> chá gelado</h2>
-                <p>Salmão e atum frescos em uma seleção especial de sushis, sashimis e hot rolls</p>
-                <h3>R$35,00</h3>
-               </div>
-              </div>
-               <div class="cardapio-item">
-                <img src="img-restaurante/sucos.jpg" alt="">
-
-                <div class="lamen-titulo">
-                <h2> Sucos</h2>
-                <p>Salmão e atum frescos em uma seleção especial de sushis, sashimis e hot rolls</p>
-                <h3>R$35,00</h3>
-               </div>
-              </div>
-
-
-
-              
-            </div>
-
-        </section>
+</section>
 
 
 
     </main>
-
+<script src="pedidos.js"></script>
 </body>
 
 </html>

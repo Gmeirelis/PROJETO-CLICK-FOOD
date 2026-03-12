@@ -21,7 +21,7 @@
         <section class="restaurante">
 
             <div class="container-restaurante">
-                <img src="img-restaurante/açai.png">
+                <img src="img-restaurante/acai.png">
                 <div class="titulo">
                     <h2>Reino Açai</h2>
                     <p>
@@ -60,222 +60,213 @@
             </div>
         </section>
 
-        <section class=" cardapio">
+       <section class="cardapio">
 
-          <div class="cardapio-container">
+  <div class="cardapio-container">
 
-              <h1 id="combo">Açai</h1>
-           
-              <div class="cardapio-item">
-                <img src="img-restaurante/acai200ml.jpg" alt="">
+    <!-- AÇAI -->
+    <div class="categoria" id="acai">
+      <h1>Açaí</h1>
 
-                <div class="combo-titulo">
-                <h2>açai 200ml </h2>
-                <p>2 acompanhamentos, 1 calda , 2 frutas</p>
-                <h3>R$ 15,00</h3>
-               </div>
-              </div>
+      <div class="cardapio-item">
+        <img src="img-restaurante/acai200ml.jpg" alt="Açaí 200ml">
+        <div class="cardapio-info">
+          <h2>Açaí 200ml</h2>
+          <p>2 acompanhamentos, 1 calda, 2 frutas</p>
+          <h3>R$ 15,00</h3>
+           <button onclick="adicionarAoCarrinho(300)">+</button>
+        </div>
+      </div>
 
-              <div class="cardapio-item">
-                <img src="img-restaurante/acai300ml.jpg" alt="">
+      <div class="cardapio-item">
+        <img src="img-restaurante/acai300ml.jpg" alt="Açaí 300ml">
+        <div class="cardapio-info">
+          <h2>Açaí 300ml</h2>
+          <p>3 acompanhamentos, 2 caldas, 3 frutas</p>
+          <h3>R$ 20,00</h3>
+          <button onclick="adicionarAoCarrinho(301)">+</button>
+        </div>
+      </div>
 
-                <div class="combo-titulo">
-                <h2>Açai 300ml</h2>
-                <p>3 acompanhamentos, 2 calda , 3 frutas</p>
-                <h3>R$ 20,00</h3>
-               </div>
-              </div>
-             
-              <div class="cardapio-item">
-                <img src="img-restaurante/acai500ml.jpg" alt="">
+      <div class="cardapio-item">
+        <img src="img-restaurante/acai500ml.jpg" alt="Açaí 500ml">
+        <div class="cardapio-info">
+          <h2>Açaí 500ml</h2>
+          <p>4 acompanhamentos, 3 caldas, 4 frutas</p>
+          <h3>R$ 25,00</h3>
+          <button onclick="adicionarAoCarrinho(302)">+</button>
+        </div>
+      </div>
 
-                <div class="combo-titulo">
-                <h2>Açai 500ml</h2>
-                <p>4 acompanhamento, 3 calda, 4 frutas</p>
-                <h3>R$ 25,00</h3>
-               </div>
-              </div>
-             <div class="cardapio-item">
-                <img src="img-restaurante/acai1l.jpg" alt="">
+      <div class="cardapio-item">
+        <img src="img-restaurante/acai1l.jpg" alt="Açaí 1L">
+        <div class="cardapio-info">
+          <h2>Açaí 1L</h2>
+          <p>5 acompanhamentos, 4 caldas, 5 frutas</p>
+          <h3>R$ 30,00</h3>
+          <button onclick="adicionarAoCarrinho(303)">+</button>
+        </div>
+      </div>
+    </div>
 
-                <div class="combo-titulo">
-                <h2>Açai 1L</h2>
-                <p> 5 Acompanhamentos, 4 calda, 5 frutas </p>
-                <h3>R$ 30,00</h3>
-               </div>
-              </div>
+    <!-- SORVETE -->
+    <div class="categoria" id="sorvete">
+      <h1>Sorvete</h1>
 
-              <h1 id="sorvete">Sorvete</h1>
+      <div class="cardapio-item">
+        <img src="img-restaurante/sorvete1.jpg" alt="Sorvete Chocolate">
+        <div class="cardapio-info">
+          <h2>Chocolate</h2>
+          <h3>R$ 15,00</h3>
+          <button onclick="adicionarAoCarrinho(304)">+</button>
+        </div>
+      </div>
 
-              
-                   <div class="cardapio-item">
-                <img src="img-restaurante/sorvete1.jpg" alt="">
+      <div class="cardapio-item">
+        <img src="img-restaurante/sorvete2.jpg" alt="Sorvete Morango">
+        <div class="cardapio-info">
+          <h2>Morango</h2>
+          <h3>R$ 25,00</h3>
+          <button onclick="adicionarAoCarrinho(305)">+</button>
+        </div>
+      </div>
 
-                <div class="sushi-titulo">
-                <h2>Hamburg Duas carne</h2>
-                <p>carne,alface,sheda,pão, tomate, peclis</p>
-                <h3>R$15,00</h3>
-               </div>
-              </div>
-               
-                   <div class="cardapio-item">
-                <img src="img-restaurante/sorvete2.jpg" alt="">
+      <div class="cardapio-item">
+        <img src="img-restaurante/sorvete3.jpg" alt="Sorvete Creme">
+        <div class="cardapio-info">
+          <h2>Creme</h2>
+          <h3>R$ 28,00</h3>
+          <button onclick="adicionarAoCarrinho(306)">+</button>
+        </div>
+      </div>
+    </div>
 
-                <div class="sushi-titulo">
-                <h2>Hamburg com Bancon</h2>
-                <p>pão,sheda,bacon,molho</p>
-                <h3>R$25,00</h3>
-               </div>
-              </div>
-                
-                   <div class="cardapio-item">
-                <img src="img-restaurante/sorvete3.jpg" alt="">
+    <!-- MILKSHAKE -->
+    <div class="categoria" id="milkshake">
+      <h1>Milkshake</h1>
 
-                <div class="sushi-titulo">
-                <h2> hamburg frango</h2>
-                <p>pão,salada com molho,queijo</p>
-                <h3>R$28,00</h3>
-               </div>
-              </div>
+      <div class="cardapio-item">
+        <img src="img-restaurante/milk1.jpg" alt="Milkshake Chocolate">
+        <div class="cardapio-info">
+          <h2>Chocolate</h2>
+          <h3>R$ 35,00</h3>
+          <button onclick="adicionarAoCarrinho(307)">+</button>
+        </div>
+      </div>
 
-              
-             <h1 id="milkshake">Milkshake</h1>
-              
-              <div class="cardapio-item">
-                <img src="img-restaurante/milk1.jpg" alt="">
+      <div class="cardapio-item">
+        <img src="img-restaurante/milk2.jpg" alt="Milkshake Morango">
+        <div class="cardapio-info">
+          <h2>Morango</h2>
+          <h3>R$ 35,00</h3>
+          <button onclick="adicionarAoCarrinho(308)">+</button>
+        </div>
+      </div>
 
-                <div class="lamen-titulo">
-                <h2> Chocolate</h2>
-                <p></p>
-                <h3>R$35,00</h3>
-               </div>
-              </div>
+      <div class="cardapio-item">
+        <img src="img-restaurante/milk3.jpg" alt="Milkshake Açaí">
+        <div class="cardapio-info">
+          <h2>Açaí</h2>
+          <h3>R$ 35,00</h3>
+          <button onclick="adicionarAoCarrinho(309)">+</button>
+        </div>
+      </div>
 
-               <div class="cardapio-item">
-                <img src="img-restaurante/milk2.jpg" alt="">
+      <div class="cardapio-item">
+        <img src="img-restaurante/milk44.jpg" alt="Milkshake Oreo">
+        <div class="cardapio-info">
+          <h2>Oreo</h2>
+          <h3>R$ 35,00</h3>
+          <button onclick="adicionarAoCarrinho(310)">+</button>
+        </div>
+      </div>
+    </div>
 
-                <div class="lamen-titulo">
-                <h2> Morango </h2>
-                <p></p>
-                <h3>R$35,00</h3>
-               </div>
-              </div>
-               <div class="cardapio-item">
-                <img src="img-restaurante/milk3.jpg" alt="">
+    <!-- SOBREMESA -->
+    <div class="categoria" id="sobremesa">
+      <h1>Sobremesas</h1>
 
-                <div class="lamen-titulo">
-                <h2> Açai</h2>
-                <p></p>
-                <h3>R$35,00</h3>
-               </div>
-              </div>
-               <div class="cardapio-item">
-                <img src="img-restaurante/milk44.jpg" alt="">
+      <div class="cardapio-item">
+        <img src="img-restaurante/sobre1.jpg" alt="Pudim">
+        <div class="cardapio-info">
+          <h2>Pudim</h2>
+          <h3>R$ 14,00</h3>
+          <button onclick="adicionarAoCarrinho(311)">+</button>
+        </div>
+      </div>
 
-                <div class="lamen-titulo">
-                <h2> Oreo</h2>
-                <p></p>
-                <h3>R$35,00</h3>
-               </div>
-              </div>
+      <div class="cardapio-item">
+        <img src="img-restaurante/sobre2.jpg" alt="Sorvete">
+        <div class="cardapio-info">
+          <h2>Sorvete</h2>
+          <h3>R$ 8,00</h3>
+          <button onclick="adicionarAoCarrinho(312)">+</button>
+        </div>
+      </div>
 
-               
-             <h1 id="sobremesa">Sobremesa</h1>
-              
-              <div class="cardapio-item">
-                <img src="img-restaurante/sobre1.jpg" alt="">
+      <div class="cardapio-item">
+        <img src="img-restaurante/sobre3.jpg" alt="Bolo">
+        <div class="cardapio-info">
+          <h2>Bolo</h2>
+          <h3>R$ 15,00</h3>
+          <button onclick="adicionarAoCarrinho(313)">+</button>
+        </div>
+      </div>
 
-                <div class="lamen-titulo">
-                <h2> pudim</h2>
-                <p></p>
-                <h3>R$14,00</h3>
-               </div>
-              </div>
+      <div class="cardapio-item">
+        <img src="img-restaurante/sobre4.jpg" alt="Brownie Nutella">
+        <div class="cardapio-info">
+          <h2>Brownie Nutella</h2>
+          <h3>R$ 10,00</h3>
+          <button onclick="adicionarAoCarrinho(314)">+</button>
+        </div>
+      </div>
+    </div>
 
-               <div class="cardapio-item">
-                <img src="img-restaurante/sobre2.jpg" alt="">
+    <!-- BEBIDAS -->
+    <div class="categoria" id="bebidas">
+      <h1>Bebidas</h1>
 
-                <div class="lamen-titulo">
-                <h2>sorvete </h2>
-                <p></p>
-                <h3>R$8,00</h3>
-               </div>
-              </div>
-               <div class="cardapio-item">
-                <img src="img-restaurante/sobre3.jpg">
+      <div class="cardapio-item">
+        <img src="img-restaurante/agua.jpg" alt="Água">
+        <div class="cardapio-info">
+          <h2>Água</h2>
+          <h3>R$ 5,00</h3>
+          <button onclick="adicionarAoCarrinho(315)">+</button>
+        </div>
+      </div>
 
-                <div class="lamen-titulo">
-                <h2> bolo</h2>
-                <p></p>
-                <h3>R$15,00</h3>
-               </div>
-              </div>
-               <div class="cardapio-item">
-                <img src="img-restaurante/sobre4.jpg" alt="">
+      <div class="cardapio-item">
+        <img src="img-restaurante/coca.jpg" alt="Coca-Cola">
+        <div class="cardapio-info">
+          <h2>Coca-Cola</h2>
+          <h3>R$ 8,00</h3>
+          <button onclick="adicionarAoCarrinho(316)">+</button>
+        </div>
+      </div>
 
-                <div class="lamen-titulo">
-                <h2> Brownie Nutella</h2>
-                <p></p>
-                <h3>R$10,00</h3>
-               </div>
-              </div>
+      <div class="cardapio-item">
+        <img src="img-restaurante/cha.jpg" alt="Chá Gelado">
+        <div class="cardapio-info">
+          <h2>Chá Gelado</h2>
+          <h3>R$ 7,00</h3>
+          <button onclick="adicionarAoCarrinho(317)">+</button>
+        </div>
+      </div>
 
-
-
-
-
-
-             <h1 id="bebidas">Bebidas</h1>
-              
-              <div class="cardapio-item">
-                <img src="img-restaurante/agua.jpg" alt="">
-
-                <div class="lamen-titulo">
-                <h2> lamen extra big</h2>
-                <p></p>
-                <h3>R$35,00</h3>
-               </div>
-              </div>
-
-               <div class="cardapio-item">
-                <img src="img-restaurante/coca.jpg" alt="">
-
-                <div class="lamen-titulo">
-                <h2> coca-cola </h2>
-                <p></p>
-                <h3>R$35,00</h3>
-               </div>
-              </div>
-               <div class="cardapio-item">
-                <img src="img-restaurante/cha.jpg" alt="">
-
-                <div class="lamen-titulo">
-                <h2> chá gelado</h2>
-                <p></p>
-                <h3>R$35,00</h3>
-               </div>
-              </div>
-               <div class="cardapio-item">
-                <img src="img-restaurante/sucos.jpg" alt="">
-
-                <div class="lamen-titulo">
-                <h2> Sucos</h2>
-                <p></p>
-                <h3>R$35,00</h3>
-               </div>
-              </div>
-
-
-
-              
-            </div>
-
-        </section>
-
-
-
+      <div class="cardapio-item">
+        <img src="img-restaurante/sucos.jpg" alt="Sucos">
+        <div class="cardapio-info">
+          <h2>Sucos Naturais</h2>
+          <h3>R$ 10,00</h3>
+          <button onclick="adicionarAoCarrinho(318)">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     </main>
-
+<script src="pedidos.js"></script>
 </body>
 
 </html>

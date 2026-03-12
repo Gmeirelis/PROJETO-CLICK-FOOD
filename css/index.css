@@ -40,15 +40,15 @@ body {
 
 /* ------------------- CATEGORIAS ------------------- */
 .categorias {
-  padding: 40px 20px;
+  padding: 70px 20px;
+   
 }
 
 .categoria-linha {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 10px;
+ display: grid;
+ grid-template-columns: 80px 80px 80px;
+ gap: 40px;
+  
 }
 
 .categoria-linha::-webkit-scrollbar {
@@ -57,7 +57,7 @@ body {
 
 .categoria {
   min-width: 110px;
-  background: #fff;
+  background: #ddddddd7;
   padding: 15px;
   border-radius: 10px;
   border: 1px solid #eeeaea;
@@ -65,6 +65,7 @@ body {
   scroll-snap-align: start;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(202, 198, 198, 0);
 }
 
 .categoria:hover {
@@ -73,10 +74,11 @@ body {
 }
 
 .categoria img {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
   border-radius: 10px;
+
 }
 
 .categoria span {
