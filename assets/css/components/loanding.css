@@ -1,0 +1,55 @@
+
+/* botao roando */ 
+
+  /* botão base */
+#btnEntrar {
+  position: relative;
+  height: 45px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: #eba03e;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* texto */
+#btnEntrar .texto {
+  display: inline-block;
+}
+
+/* spinner (bola rodando) */
+.loader {
+  width: 18px;
+  height: 18px;
+  border: 3px solid white;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  animation: girar 0.8s linear infinite;
+}
+
+/* animação */
+@keyframes girar {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* estado loading */
+#btnEntrar.loading .texto {
+  visibility: hidden;
+}
+
+#btnEntrar.loading .loader {
+  display: block;
+}

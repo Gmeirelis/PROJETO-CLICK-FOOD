@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cardapio</title>
+     <link rel="stylesheet" href="/assets/css/components/cardapio.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+     <link rel="stylesheet" href="css/menu-inferior.css" />
+</head>
+
+<body>
+    <main>
+      <div class="imagem-restaurante">
+        <img src="/assets/img/restaurantes/asiatico.png" >
+</div>
+
+
+        <!--------------------------STATUS DO RESTURANTE E DESCRIÇÃO-------------------------------------------------------------->
+
+        <section class="restaurante">
+
+            <div class="container-restaurante">
+                <img src="/assets/img/restaurantes/asiatico.png">
+                <div class="titulo">
+                    <h2>Nam Nam Korean</h2>
+                    <p>
+                        <i class="fa-solid fa-utensils"></i>
+                        japonesa e oriental
+                    </p>
+                </div>
+
+            </div>
+            <div class="container-status">
+                <p class="aberto">
+                    <i class="fa-solid fa-store"></i>
+                    aberto
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    selecione um endereço de entrega
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-receipt"></i>
+                    pedido mínimo 20 R$
+                </p>
+            </div>
+        </section>
+        <!----------------------------FILTRO DO RESTAURENTE------------------------------->
+        <section>
+            <div class="container-categorias">
+
+                <a href="#"><b>Combo</b></a>
+                <a href="#"><b>Sushi</b></a>
+                <a href="#"><b>Lamen</b></a>
+                <a href="#"><b>Bebidas</b></a>
+
+            </div>
+        </section>
+
+       <section class="cardapio">
+
+  <div class="cardapio-container">
+
+    <!-- COMBOS -->
+    <div class="categoria" id="combos">
+      <h1>Combos</h1>
+
+      <div class="cardapio-item">
+        <img src="/assets/img/produto/combo-japonesa.jpg" alt="Combo Tradicional Japonês">
+        <div class="cardapio-info">
+          <h2>Combo Tradicional Japonês</h2>
+          <p>Salmão e atum frescos em seleção especial de sushis e sashimis.</p>
+          <h3>R$ 25,00</h3>
+            <button onclick="adicionarAoCarrinho(200)">+</button>
+        </div>
+      </div>
+
+      <div class="cardapio-item">
+        <img src="/assets/img/produto/combo-japonesa-2.jpg" alt="Combo Samurai">
+        <div class="cardapio-info">
+          <h2>Combo Samurai</h2>
+          <p>Seleção premium com hot rolls e sashimis especiais.</p>
+          <h3>R$ 25,00</h3>
+            <button onclick="adicionarAoCarrinho(201)">+</button>
+        </div>
+      </div>
+
+      <div class="cardapio-item">
+        <img src="/assets/img/produto/combo-japonesa-3.jpg" alt="Combo Sensações do Oriente">
+        <div class="cardapio-info">
+          <h2>Combo Sensações do Oriente</h2>
+          <p>Experiência completa com variedade oriental.</p>
+          <h3>R$ 50,00</h3>
+            <button onclick="adicionarAoCarrinho(202)">+</button>
+        </div>
+      </div>
+
+      <div class="cardapio-item">
+        <img src="/assets/img/produto/combo-japonesa-4.jpg" alt="Combo Imperial">
+        <div class="cardapio-info">
+          <h2>Combo Imperial</h2>
+          <p>Seleção especial da casa com ingredientes premium.</p>
+          <h3>R$ 78,00</h3>
+            <button onclick="adicionarAoCarrinho(203)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUSHI -->
+    <div class="categoria" id="sushi">
+      <h1>Sushi</h1>
+
+      <div class="cardapio-item">
+        <img src="/assets/img/produto/sushi.jpg" alt="Sushi Hot Roll">
+        <div class="cardapio-info">
+          <h2>Sushi Hot Roll</h2>
+          <p>Hot roll crocante com recheio especial.</p>
+          <h3>R$ 35,00</h3>
+            <button onclick="adicionarAoCarrinho(204)">+</button>
+        </div>
+      </div>
+
+      <div class="cardapio-item">
+        <img src="/assets/img/produto/sushi-3.jpg" alt="Sushi com Camarão">
+        <div class="cardapio-info">
+          <h2>Sushi com Camarão</h2>
+          <p>Sushi fresco com camarão selecionado.</p>
+          <h3>R$ 35,00</h3>
+            <button onclick="adicionarAoCarrinho(205)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LAMEN -->
+    <div class="categoria" id="lamen">
+      <h1>Lamen</h1>
+
+      <div class="cardapio-item">
+        <img src="/assets/img/produto/lamem-2.jpg" alt="Lamen Caprichado">
+        <div class="cardapio-info">
+          <h2>Lamen Caprichado</h2>
+          <p>Caldo encorpado com ingredientes especiais.</p>
+          <h3>R$ 35,00</h3>
+            <button onclick="adicionarAoCarrinho(206)">+</button>
+        </div>
+      </div>
+
+      <div class="cardapio-item">
+        <img src="/assets/img/produto/lamen.jpg" alt="Lamen Simples">
+        <div class="cardapio-info">
+          <h2>Lamen Simples</h2>
+          <p>Tradicional e saboroso.</p>
+          <h3>R$ 35,00</h3>
+            <button onclick="adicionarAoCarrinho(207)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- BEBIDAS -->
+    <div class="categoria" id="bebidas">
+      <h1>Bebidas</h1>
+
+      <div class="cardapio-item">
+        <img src="/assets/img/produto/coca.jpg" alt="Coca-Cola">
+        <div class="cardapio-info">
+          <h2>Coca-Cola</h2>
+          <p>Refrigerante lata 350ml.</p>
+          <h3>R$ 8,00</h3>
+            <button onclick="adicionarAoCarrinho(208)">+</button>
+        </div>
+      </div>
+
+      <div class="cardapio-item">
+        <img src="/assets/img/produto/cha.jpg" alt="Chá Gelado">
+        <div class="cardapio-info">
+          <h2>Chá Gelado</h2>
+          <p>Refrescante e natural.</p>
+          <h3>R$ 10,00</h3>
+            <button onclick="adicionarAoCarrinho(209)">+</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+    </main>
+<script src="/pedidos.js"></script>
+</body>
+
+</html>

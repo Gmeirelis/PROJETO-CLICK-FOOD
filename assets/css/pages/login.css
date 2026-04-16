@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+     font-family: 'Nunito', sans-serif;
+}
+body{
+ background-color: #e99d0e;
+}
+.formularios {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.login {
+    background-color: #fff;
+    width: 90%;
+    max-width: 300px;
+    padding: 50px 35px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.error{
+    color: #db4437;
+    font-size: 10px;
+
+}
+.entrar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.entrar h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.entrar input {
+    height: 40px;
+    border: 1px solid #c5c5c5;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+
+
+.cadastro {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+}
+
+.cadastro a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+}
+
+.cadastro a:hover {
+    color: #e38700;
+}
+
+/* BOTÃO GOOGLE */
+.google-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    background-color: #eeeeee;
+    color: #444;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.google-login i {
+    font-size: 18px;
+    color: #db4437;
+}
+
+.google-login:hover {
+    background-color: #d6d6d6;
+}
+
+@media (min-width: 1024px) {
+
+.formularios{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+  .login {
+    background-color: #fff;  
+    width: 700px;
+    height: 700px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    padding: 100px;
+   
+  }
+
+  .entrar{
+    gap: 60px;
+
+  }
+  .google-login {
+    background-color: #b4b4b4;
+    font-size: 20px;
+  }
+
+  .cadastro a {
+    text-decoration: none;
+    color: #444;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.entrar input {
+    height: 50px;
+    border: 1px solid #c5c5c5;
+    border-radius: 6px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+
+.error{
+    color: #db4437;
+    font-size: 18px;
+    position: relative;
+    bottom: 50px;
+
+}
+
+ input:focus {
+  outline: none; /* remove borda padrão do navegador */
+  border: 2px solid orange;
+}
+}

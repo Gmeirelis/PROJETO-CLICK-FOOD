@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus pedidos</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/pages/pedidos.css">
+      <link rel="stylesheet" href="/assets/css/components/menu-inferior.css">
+      <link rel="stylesheet" href="../assets/css/menu-inferior.css">
+      <link rel="stylesheet" href="/assets/css/components/header.css">
+       <link rel="stylesheet" href="../assets/css/components/loanding.css">
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+    <img class="logo-img" src="/assets/img/icons/iconeClickFood.png">
+  </header>
+    
+<main>
+
+     <div class="status">
+    <h4 class="titulos" ></h4>
+    </div>
+    
+<div class="container">   
+        
+<div id="lista" class="lista-pedidos"></div>
+
+</div>
+
+ <div class="apagar-pedidos">
+<button onclick="limparCarrinho()" id="btn-apagar" class="btn-limpar">
+  <i class="fa-solid fa-trash"></i> Limpar
+</button>
+</div>
+
+<section >
+<div class="container-resumo">
+  
+  <div class="resumo">
+     <h4>Total com entrega</h4> 
+     <div id="total" class="total-pedidos">
+
+     </div> 
+    </div>
+     <div class="btn-fechar"> 
+      <button id="btnEntrar"> 
+        <span class="texto">FINALIZAR PEDIDOS</span> 
+        <span class="loader"></span> 
+      </div> 
+    </div> 
+</section>
+
+    
+<!-- MENU FIXO -->
+<nav class="menu-inferior">
+
+    <a href="/index.html" class="item">
+        <i class="fa-solid fa-house"></i>
+        <span>Início</span>
+    </a>
+
+    <a href="busca.html" class="item ativo">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Buscar</span>
+    </a>
+
+    <a href="pedido.html" class="item">
+        <i class="fa-solid fa-list"></i>
+        <span>Pedidos</span>
+    </a>
+
+    <a href="perfil.html" class="item">
+        <i class="fa-solid fa-user"></i>
+        <span>Perfil</span>
+    </a>
+
+</nav>
+
+</main>
+
+
+ <script src="/pedidos.js"></script>   
+ <script>
+ const btn = document.querySelector('#btnEntrar');
+
+btn.addEventListener('click', () => {
+  btn.classList.add('loading');
+
+  // simulação de requisição (ex: login)
+  setTimeout(() => {
+    btn.classList.remove('loading');
+  }, 4000);
+});
+</script>
+</body>
+</html>

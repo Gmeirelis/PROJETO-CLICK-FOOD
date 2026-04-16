@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <link rel="stylesheet" href="/assets/css/pages/perfil.css">
+      <link rel="stylesheet" href="/assets/css/components/menu-inferior.css">
+    <title>perfil</title>
+</head>
+<body>
+    <header>
+       <div class="perfil">
+         <img src="/assets/img/slides/freepik__upload__45.png" alt="">
+         <h1 id="nome">usuario</h1>
+         <br>
+        
+       </div>
+    </header>
+    <main>
+
+     <section class="configuracao">
+  <div class="dados">
+    <div class="config">
+      <i class="fa-regular fa-clipboard"></i>
+      <p>Dados da conta</p>
+     
+    </div>
+
+    <div class="config">
+      <i class="fa-regular fa-bell" ></i>
+      <p>Notificações</p>
+       
+    </div>
+
+    <div class="config">
+      <i class="fa-solid fa-lock"></i>
+      <p>Segurança</p>
+    </div>
+
+    <div class="config">
+     <i class="fa-solid fa-shield-halved"></i>
+      <p>Privacidade</p>
+    </div>
+
+    <div class="config">
+      <i class="fa-solid fa-file-contract"></i>
+      <p>Assinatura</p>
+      
+    </div>
+
+    <div class="config">
+   <i class="fa-solid fa-circle-info"></i>
+      <p>Ajuda</p>
+    </div>
+    
+    <div class="config">
+   
+   <i class="fa-solid fa-map-location-dot"></i>
+      <p>Endereços</p>
+    </div>
+    
+    <div class="config">
+   <i class="fa-solid fa-gear"></i>
+      <p>Configuração</p>
+    </div>
+    
+<div class="config">
+  <a href="login.html">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    <p class="logouf">Sair</p>
+  </a>
+</div>
+  </div>
+</section>
+
+ <section class="menu-geral">
+      <nav class="menu-inferior">
+
+        <a href="/index.html" class="item ativo">
+          <i class="fa-solid fa-house"></i>
+          <span>inicio</span>
+        </a>
+
+        <a href="busca.html" class="item">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span>buscar</span>
+        </a>
+
+        <a href="pedido.html" class="item">
+          <i class="fa-solid fa-list"></i>
+          <span>pedidos</span>
+        </a>
+
+        <a href="perfil.html" class="item">
+          <i class="fa-solid fa-user"></i>
+          <span>perfil</span>
+        </a>
+
+
+      </nav>
+      </div>
+    </section>
+
+    </main>
+
+    
+</body>
+
+<script>
+
+const usu = JSON.parse(localStorage.getItem('usuario')) || null
+const sair = document.querySelector('.logouf')
+
+sair.addEventListener('click', ()=>{
+
+localStorage.removeItem('usuarioLogado')
+setTimeout(()=>{
+window.location.href='login.html'
+},5000)
+
+})
+ 
+ /*exibe o nome do usuario*/
+function nome(){
+ const name = document.querySelector('#nome')
+ 
+ if(!usu){
+  name.innerHTML="Faça login"
+ }else{
+ name.innerHTML=`${usu.nome} ${usu.sobrenome}`}
+
+}
+nome()
+
+
+
+
+</script>
+
+
+</html>

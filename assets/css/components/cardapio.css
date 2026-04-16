@@ -1,0 +1,360 @@
+/* ===============================
+   RESET / BASE
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+/* ===============================
+   CONTAINER PRINCIPAL
+================================ */
+
+.restaurante {
+  background-color: white;
+  position: relative;
+  bottom: 60px;
+  padding: 0 0 20px 20px;
+  border-radius: 10px 10px 0 0;
+}
+
+/* ===============================
+   IMAGEM DE CAPA
+================================ */
+
+@media (min-width: 1024px) {
+  /* estilos para desktop */
+  .imagem-restaurante {
+    display: flex;
+    justify-content: center;
+    margin-left: 400px;
+    margin-right: 400px;
+    border-radius: 20px;
+    width: 1500px;
+    height: 800px;
+  }
+
+  .imagem-restaurante img {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  /* imagem */
+}
+
+/* BLOCO RESTAURANTE*/
+
+.container-restaurante {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 50px;
+  padding-top: 50px;
+}
+
+.container-restaurante img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.container-restaurante h2 {
+  font-size: 25px;
+}
+
+.container-restaurante p {
+  color: rgb(67, 66, 66);
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+@media (min-width: 1024px) {
+  /*desktop restaurante e status */
+  .restaurante {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 150px;
+    padding: 0px;
+
+    margin: 0px 400px 0px 400px;
+  }
+  .container-restaurante img {
+    position: relative;
+    bottom: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  .container-restaurante h2 {
+    font-size: 35px;
+  }
+  .container-restaurante p {
+    font-size: 20px;
+  }
+
+  .container-status {
+    position: relative;
+    top: 80px;
+  }
+}
+
+/* ===============================
+   STATUS DO RESTAURANTE
+================================ */
+
+.container-status {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.container-status p {
+  font-size: 15px;
+  color: rgb(111, 110, 110);
+}
+
+/* ===============================
+   ÍCONES + TEXTO
+================================ */
+
+.container-status p,
+.titulo p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (min-width: 1024px) {
+  .container-status p {
+    font-size: 20px;
+    color: rgb(111, 110, 110);
+  }
+}
+
+/* ===============================
+   ESTADO: ABERTO
+================================ */
+
+.container-status .aberto {
+  color: green;
+  font-weight: bold;
+}
+
+.container-status .aberto i {
+  color: green;
+}
+
+/* ===============================*/
+
+.container-categorias {
+  position: relative;
+  left: 20px;
+  top: 30px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  padding: 12px 16px;
+  background-color: #ffffff;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Esconde scrollbar */
+.container-categorias::-webkit-scrollbar {
+  display: none;
+}
+
+.container-categorias a {
+  flex: 0 0 auto; /* impede quebrar linha */
+  scroll-snap-align: start;
+
+  padding: 10px 16px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  color: rgb(218, 160, 11);
+  background-color: #fff7e6;
+  border: 1px solid rgb(224, 142, 28);
+
+  white-space: nowrap; /* impede quebrar texto */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover (desktop) */
+.container-categorias a:hover {
+  background-color: rgb(224, 142, 28);
+  color: white;
+}
+
+/* Active (toque mobile) */
+.container-categorias a:active {
+  transform: scale(0.95);
+}
+
+@media (min-width: 1024px) {
+  /* desktop filtro*/
+  .container-categorias {
+    display: flex;
+    justify-content: center;
+    margin: 0px 400px 0px 400px;
+    gap: 100px;
+  }
+  .container-categorias a {
+    text-decoration: none;
+    color: rgb(218, 160, 11);
+    border: 1px solid rgb(218, 160, 11);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 15px;
+  }
+}
+
+/*CARDÁPIO GLOBAL*/
+
+.cardapio {
+  background-color: #f9f9f9;
+  padding: 20px 16px;
+}
+.categoria h1 {
+  position: relative;
+  top: 20px;
+}
+/* Container geral */
+.cardapio-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Título da seção */
+.cardapio-container h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #444;
+  padding-bottom: 12px;
+}
+
+/* Item do cardápio */
+.cardapio-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* Imagem */
+.cardapio-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* Bloco de informações */
+.cardapio-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Nome do prato */
+.cardapio-info h2 {
+  font-size: 16px;
+  font-weight: 600;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Descrição */
+.cardapio-info p {
+  font-size: 13px;
+  color: #777;
+  margin: 0;
+}
+
+/* Preço */
+.cardapio-info h3 {
+  font-size: 16px;
+  color: #1a7f37;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.cardapio-container button {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  background: rgb(250, 181, 32);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: 200px;
+}
+
+@media (min-width: 1024px) {
+  .cardapio-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    margin: 0px 400px 0px 400px;
+
+    padding: 60px 0px 0px 0px;
+  }
+
+  .categoria h1 {
+    padding:20px ;
+    font-size: 30px;
+  }
+
+  .cardapio-item {
+    display: flex;
+    gap: 30px;
+  }
+
+  .cardapio-item h2 {
+    font-size: 25px;
+  }
+
+  .cardapio-info p {
+    font-size: 18px;
+    color: #777;
+    margin: 0;
+  }
+  .cardapio-container button {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    border: none;
+    background: rgb(250, 181, 32);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: 200px;
+  }
+}

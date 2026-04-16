@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: #eba03e;
+}
+/* container geral */
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.cadastro-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cad {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+button {
+  width: 100%;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin: 15px 0 0 0;
+}
+.aviso {
+  position: relative;
+  bottom: 20px;
+  font-size: 10px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f97316;
+  color: white;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 5px rgba(249, 115, 22, 0.5);
+}
+
+.error {
+  position: relative;
+  bottom: 10px;
+  font-size: 15px;
+}
+@media (min-width: 1024px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: auto;
+    margin: 100px 700px 0px 700px;
+    background-color: #fff;
+    border-radius: 10px;
+    
+    
+  }
+
+  .container img {
+    position: relative;
+    left: 100px;
+  }
+
+  #cadastro {
+    background:#fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+  }
+
+  .cadastro-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .cad {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #f97316;
+    box-shadow: 0 0 5px rgba(249, 115, 22, 0.5);
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f97316;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+
+.erro {
+   color: red;
+  margin-right: 8px;
+}
+.correto {
+color: green;
+}
+
+
+.verificacao  {
+  background-color: rgba(224, 221, 221, 0.808);
+  
+  border-radius: 5px;
+  padding: 5px;
+  
+}
+.verificacao p{
+  font-size: 13px;
+}
+.inputCorreto{
+  border: 1px solid rgb(7, 184, 7);
+}
+.inputErro{
+   border: 1px solid red;
+}
+
+
+
+/* botao roando */ 
+
+  /* botão base */
+#btnEntrar {
+  position: relative;
+  height: 45px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: #eba03e;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* texto */
+#btnEntrar .texto {
+  display: inline-block;
+}
+
+/* spinner (bola rodando) */
+.loader {
+  width: 18px;
+  height: 18px;
+  border: 3px solid white;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  animation: girar 0.8s linear infinite;
+}
+
+/* animação */
+@keyframes girar {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* estado loading */
+#btnEntrar.loading .texto {
+  visibility: hidden;
+}
+
+#btnEntrar.loading .loader {
+  display: block;
+}

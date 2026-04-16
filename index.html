@@ -6,73 +6,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>App Delivery</title>
 
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="/assets/css/pages/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="assets/css/components/menu-inferior.css">
 </head>
 
 <body>
 
   <!-- HEADER -->
   <header class="header">
-    <img class="logo-img" src="icone/ChatGPT Image 3 de nov. de 2025, 09_25_16.png">
+    <img class="logo-img" src="/assets/img/icons/iconeClickFood.png">
     <nav class="menu">
-      <a href="#">Início</a>
-      <a href="#">Parceiros</a>
-      <a href="#">Sobre</a>
+      
+    <span id="perfil" ></span>
+   
+
     </nav>
   </header>
 
   <main>
+    <section class="boasVindas" >
+
+    <div class="bemVindo"> </div>
+
+   
+
+    </section>
 
     <!-- CATEGORIAS -->
     <section class="categorias">
   <div class="categoria-linha">
-    <div class="categoria">
-      <img src="icone-categoria.img/hamburg-animado.png" alt="Hambúrguer">
-      <span>Hambúrguer</span>
+    <div class="categoria2">
+      <img src="/assets/img/icons/hamburg-animado.png" alt="Hambúrguer"  class="imag">
+      <span> <strong>Hambúrguer</strong></span>
+    </div>
+   <div class="categoria2">
+      <img src="assets/img/icons/acai-animado.png" alt="Açaí" class="imag">
+      <span><strong>Açaí</strong></span>
     </div>
 
-    <div class="categoria">
-      <img src="icone-categoria.img/acai-animado.png" alt="Açaí">
-      <span>Açaí</span>
+    <div class="categoria2">
+      <img src="assets/img/icons/sorvete-animado.png" alt="Sorvete" class="imag">
+      <span><strong>Sorvete</strong></span>
     </div>
 
-    <div class="categoria">
-      <img src="icone-categoria.img/sorvete-animado.png" alt="Sorvete">
-      <span>Sorvete</span>
+    <div class="categoria2">
+      <img src="assets/img/icons/sanduiche-animadopng.png" alt="Salgado" class="imag">
+      <span><strong>Sanduiche</Strong></span>
     </div>
 
-    <div class="categoria">
-      <img src="icone-categoria.img/sanduiche-animadopng.png" alt="Salgado">
-      <span>Sanduiche</span>
+    <div class="categoria2">
+      <img src="assets/img/icons/suco-animado.png" alt="Suco"class="imag">
+      <span><strong>Suco</strong></span>
     </div>
-
-    <div class="categoria">
-      <img src="icone-categoria.img/suco-animado.png" alt="Suco">
-      <span>Suco</span>
+    <div class="categoria2">
+      <img src="assets/img/icons/suco-animado.png" alt="Suco">
+      <span><strong>Suco</strong></span>
     </div>
-    <div class="categoria">
-      <img src="icone-categoria.img/suco-animado.png" alt="Suco">
-      <span>Suco</span>
-    </div>
+  
   </div>
+<!---nossos restaurante-->
+</section>
+<section class="nossos">
+
+<div class="containe-food">
+
+  <div class="intro">
+  <h3>Nossos Restaurantes</h3>
+  </div>   
+  <div class="imag" id="imag"></div>
+  </div>
+</div>
+
 
 </section>
-
-
     
    <!-- CARROSSEL -->
    <section class="carrossel">
     <ul class="slides">
       <li class="slide ativo">
-        <img src="img/pizza-promocao.jpeg" alt="Pizza">
+        <img src="assets/img/slides/pizza-promocao.jpeg" alt="Pizza">
       </li>
       <li class="slide">
-        <img src="img/macarão.jpeg" alt="Macarrão">
+        <img src="assets/img/slides/macarão.jpeg" alt="Macarrão">
       </li>
       <li class="slide">
-        <img src="img/promoçao.png" alt="Promoção">
+        <img src="assets/img/slides/promoçao.png" alt="Promoção">
       </li>
     </ul>
   </section>
@@ -87,8 +108,9 @@
   </div>
 </section>
 
-<i class="fas fa-filter"  style="font-size: 10px;">filtros</i>
-
+<div class="filter">
+<i class="fas fa-filter"  style="font-size: 10px;" >filtros</i>
+</div>
 
     <!-- FILTROS -->
    <section class="filtros">
@@ -139,63 +161,26 @@
 
 
     <!-- LISTA DE RESTAURANTES -->
+     <div class="lojass">
     <h1 class="titulo-secao">Lojas</h1>
-
-    <section class="restaurantes" id="lista-restaurantes">
-      <div class="restaurante">
-        <a href="cardapio-burg.html">
-        <img src="img-restaurante/hamburg.png" alt="">
-        <h3>Burg Delicious Teste</h3>
-        <p>⭐ 4,5 • Lanches • 30-40 min</p>
-        </a>
-      </div>
-
-   <div class="restaurante">
-  <a href="cardapio.html">
-    <img src="img-restaurante/asiatico.png" alt="Nam Nam Korean">
-    <h3>Nam Nam Korean</h3>
-    <p>⭐ 5,0 • Japonesa • 25-35 min</p>
-  </a>
 </div>
-
-
-      <div class="restaurante">
-        <img src="img-restaurante/resturante-comida-simples.png" alt="">
-        <h3>Chef Restaurante</h3>
-        <p>⭐ 4,5 • Lanches • 30-40 min</p>
-      </div>
-
-      <div class="restaurante">
-        <a href="cardapioacai.html">
-        <img src="img-restaurante/acai.png" alt="">
-        <h3>Reino Açai</h3>
-        <p>⭐ 4,5 • Açaí • 30-40 min</p>
-        </a>
-      </div>
-
-      <div class="restaurante">
-        <img src="img-restaurante/sorveteria.png" alt="">
-        <h3>Sorveteria</h3>
-        <p>⭐ 4,5 • Sorvetes • 20-30 min</p>
-      </div>
-
-      <div class="restaurante">
-        <img src="img-restaurante/salgado.png" alt="">
-        <h3>Arlene Salgados</h3>
-        <p>⭐ 4,5 • Salgados • 30-40 min</p>
-      </div>
+<!--renderização no index.js--->
+    <section class="restaurantes" id="lista-restaurantes">
+      
     </section>
 
   </main>
 
   <!-- MENU INFERIOR -->
+   <div id="container-inferior">
   <nav class="menu-inferior">
     <a href="index.html" class="item ativo"><i class="fa-solid fa-house"></i><span>Início</span></a>
-    <a href="busca.html" class="item"><i class="fa-solid fa-magnifying-glass"></i><span>Buscar</span></a>
-    <a href="pedido.html" class="item"><i class="fa-solid fa-list"></i><span>Pedidos</span></a>
-    <a href="perfil.html" class="item"><i class="fa-solid fa-user"></i><span>Perfil</span></a>
+    <a href="/pages/busca.html" class="item"><i class="fa-solid fa-magnifying-glass"></i><span>Buscar</span></a>
+    <a href="/pages/pedido.html" class="item"><i class="fa-solid fa-list"></i><span>Pedidos</span></a>
+    <a href="/pages/perfil.html" class="item"><i class="fa-solid fa-user"></i><span>Perfil</span></a>
   </nav>
+  </div>
 
-  <script src="index.js"></script>
+  <script src="/assets/js/index.js"></script>
 </body>
 </html>
