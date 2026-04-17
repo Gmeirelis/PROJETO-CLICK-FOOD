@@ -11,22 +11,25 @@
   z-index: 999;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .menu-inferior .item {
-  flex: 1; /* Cada item ocupa a mesma largura */
+  flex: 1;
+  /* Cada item ocupa a mesma largura */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   color: #fff;
-  padding: 8px 0; /* Aumenta a área de toque */
+  padding: 8px 0;
+  /* Aumenta a área de toque */
 }
 
 .menu-inferior .item i {
-  font-size: 22px; /* Ícone maior */
+  font-size: 22px;
+  /* Ícone maior */
   margin-bottom: 4px;
 }
 
@@ -43,21 +46,33 @@
 
 
 
+<<<<<<< HEAD
 @media (min-width: 1024px){
 .menu-inferior {
   position: fixed;
    width: 80%;
+=======
+@media (min-width: 1024px) {
+  .menu-inferior {
+   position: fixed;
+   width: 70%;
+>>>>>>> 724e674daa5fbad8a6f9c8a2c4da3067089f00b1
   background: #e79026;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px 0;
+<<<<<<< HEAD
   z-index: 889;
+=======
+  z-index: 999;
+>>>>>>> 724e674daa5fbad8a6f9c8a2c4da3067089f00b1
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
  
     padding-bottom: 10px;
     margin-right: 400px;
+<<<<<<< HEAD
     margin-left: 300px;
 }
 .menu-inferior .item {
@@ -68,8 +83,21 @@
   justify-content: center;
   text-decoration: none;
   color: #fff;
+=======
+    margin-left: 400px;
+  }
 
-  
-}
-  
+  .menu-inferior .item {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+
+
+  }
+>>>>>>> 724e674daa5fbad8a6f9c8a2c4da3067089f00b1
+
 }
