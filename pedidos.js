@@ -49,7 +49,7 @@ function adicionarAoCarrinho(id) {
   window.location.href = "../pages/pedido.html";
 }
 
-if (window.location.pathname.includes("/pages/pedido.html")) {
+if (window.location.pathname.includes("../pages/pedido.html")) {
   const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
   const lista = document.getElementById("lista");
