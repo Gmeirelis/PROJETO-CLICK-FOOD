@@ -46,7 +46,7 @@
 @media (min-width: 1024px){
 .menu-inferior {
   position: fixed;
-   width: 50%;
+   width: 100%;
   background: #e79026;
   display: flex;
   justify-content: center;
