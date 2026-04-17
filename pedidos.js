@@ -1,17 +1,12 @@
-
-
 let restaurantes = [];
 
 async function carregarDados() {
   try {
-    const resposta = await fetch("../restaurante.json");
-    if (!resposta.ok) {
-      throw new Error(`Erro HTTP! status: ${resposta.status}`);
-    }
-    const data = await resposta.json();
-
-    restaurantes = data;
-    console.log("Restaurantes carregados ", restaurantes);
+   
+    const resposta = await fetch("../restaurante.json"); 
+    if (!resposta.ok) throw new Error(`Erro HTTP! status: ${resposta.status}`);
+    restaurantes = await resposta.json();
+    console.log("Restaurantes carregados", restaurantes);
   } catch (error) {
     console.error("Erro ao carregar os dados:", error);
   }
@@ -19,110 +14,84 @@ async function carregarDados() {
 
 carregarDados();
 
+//--- FUNÇÃO ADICIONAR ---
 function adicionarAoCarrinho(id) {
   let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
   let itemSelecionado = null;
 
   restaurantes.forEach((restaurante) => {
     if (!restaurante.cardapio) return;
-
     restaurante.cardapio.forEach((categoria) => {
       categoria.itens.forEach((item) => {
         if (item.id === id) {
-          itemSelecionado = {
-            ...item,
-            restaurante: restaurante.nome,
-          };
+          itemSelecionado = { ...item, restaurante: restaurante.nome };
         }
       });
     });
   });
 
-  if (!itemSelecionado) {
-    console.log("Item não encontrado no JSON carregado.");
-    return;
-  }
+  if (!itemSelecionado) return;
 
   carrinho.push(itemSelecionado);
-
   localStorage.setItem("carrinho", JSON.stringify(carrinho));
-  window.location.href = "../pages/pedido.html";
+  window.location.href = "pedido.html"; // Caminho simplificado
 }
 
-if (window.location.pathname.includes("../pages/pedido.html")) {
-  const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+// --- LÓGICA DA PÁGINA DE PEDIDOS ---
+// Mudança aqui: verificamos se o elemento 'lista' existe na página em vez de olhar a URL
+const lista = document.getElementById("lista");
+const totalEl = document.getElementById("total");
+const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-  const lista = document.getElementById("lista");
-  const totalEl = document.getElementById("total");
-
+if (lista) {
   let total = 0;
+  lista.innerHTML = ""; // Limpa a lista antes de preencher
 
   carrinho.forEach((item) => {
     total += item.valor;
-
     lista.innerHTML += `
-  <div class="item-pedido">
-
-  <div class = img-pedidos>
-   <img src="${item.imagem}">
-   </div>
-   
-   <div class = detalhes-pedidos>
-    <h4>${item.nome}</h4>
-    <p class="nome-res">${item.restaurante}</p>
-    <p>${item.descricao}</p>
-    <p class="valor">
-      ${item.valor.toLocaleString("pt-BR", {
-        style: "currency",
-        currency: "BRL",
-      })}
-    </p>
-   
-  </div>
-  </div>
-`;
+      <div class="item-pedido">
+        <div class="img-pedidos"><img src="${item.imagem}"></div>
+        <div class="detalhes-pedidos">
+          <h4>${item.nome}</h4>
+          <p class="nome-res">${item.restaurante}</p>
+          <p>${item.descricao}</p>
+          <p class="valor">${item.valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</p>
+        </div>
+      </div>`;
   });
 
   if (totalEl) {
-    totalEl.innerText = total.toLocaleString("pt-BR", {
-      style: "currency",
-      currency: "BRL",
-    });
+    totalEl.innerText = total.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
   }
 }
 
-/****apagar todos os pedidos pedidos */
-
-const botao = document.querySelector("#btn-apagar");
-const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+// --- BOTÃO APAGAR ---
+const botaoApagar = document.querySelector("#btn-apagar");
+if (botaoApagar && carrinho.length === 0) {
+  botaoApagar.style.display = "none";
+}
 
 function limparCarrinho() {
   localStorage.removeItem("carrinho");
   location.reload();
 }
 
-if (carrinho.length === 0 && botao) {
-  botao.classList.add("none");
-}
+// --- STATUS DO CARRINHO (Texto vazio) ---
+const textoStatus = document.querySelector(".titulos");
+const containerStatus = document.querySelector(".status");
 
-/* texto qunado o item e add ou quando nao tem item */
-
-const texto = document.querySelector(".titulos");
-const containerTexto = document.querySelector(".status");
-
-if (carrinho.length === 0) {
-  texto.innerHTML = "Nenhum item adicionado";
-  containerTexto.classList.remove("none");
-} else {
-  containerTexto.classList.add("none");
-}
-
-const resumo = document.querySelector(".container-resumo");
-
-function sumirResumo() {
+if (textoStatus && containerStatus) {
   if (carrinho.length === 0) {
-    resumo.classList.add("none");
+    textoStatus.innerHTML = "Nenhum item adicionado";
+    containerStatus.classList.remove("none");
+  } else {
+    containerStatus.classList.add("none");
   }
 }
 
-sumirResumo();
+// --- RESUMO ---
+const resumo = document.querySelector(".container-resumo");
+if (resumo && carrinho.length === 0) {
+  resumo.classList.add("none");
+}
