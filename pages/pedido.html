@@ -14,7 +14,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+    <header class="logo">
     <img class="logo-img" src="../assets/img/icons/iconeClickFood.png">
   </header>
     
@@ -29,28 +29,29 @@
 <div id="lista" class="lista-pedidos"></div>
 
 </div>
-
- <div class="apagar-pedidos">
-<button onclick="limparCarrinho()" id="btn-apagar" class="btn-limpar">
-  <i class="fa-solid fa-trash"></i> Limpar
-</button>
+<div class="apagar-pedidos">
+  <button onclick="limparCarrinho()" id="btn-apagar" class="btn-limpar">
+    <i class="fa-solid fa-trash"></i> Limpar
+  </button>
 </div>
 
-<section >
-<div class="container-resumo">
-  
-  <div class="resumo">
-     <h4>Total com entrega</h4> 
-     <div id="total" class="total-pedidos">
-
-     </div> 
+<section>
+  <div class="container-resumo">
+    <div class="resumo">
+      <h4>Total com entrega</h4>
+      <div id="total" class="total-pedidos">
+        R$ 0,00
+      </div>
     </div>
-     <div class="btn-fechar"> 
-      <button id="btnEntrar"> 
-        <span class="texto">FINALIZAR PEDIDOS</span> 
-        <span class="loader"></span> 
-      </div> 
-    </div> 
+
+    <div class="btn-fechar">
+      <button id="btnEntrar">
+        <span class="texto">FINALIZAR PEDIDOS</span>
+        <span class="loader"></span>
+      </button>
+    </div>
+  </div>
+
 </section>
 
     
@@ -82,7 +83,7 @@
 </main>
 
 
- <script src="./pedidos.js"></script>   
+ <script src="../pedidos.js"></script>   
  <script>
  const btn = document.querySelector('#btnEntrar');
 
