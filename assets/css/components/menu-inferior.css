@@ -46,19 +46,19 @@
 @media (min-width: 1024px){
 .menu-inferior {
   position: fixed;
-   width: 50%;
+   width: 80%;
   background: #e79026;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 0;
-  z-index: 999;
+  padding: 20px 0;
+  z-index: 889;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
  
     padding-bottom: 10px;
     margin-right: 400px;
-    margin-left: 400px;
+    margin-left: 300px;
 }
 .menu-inferior .item {
   
