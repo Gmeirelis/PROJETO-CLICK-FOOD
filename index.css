@@ -11,12 +11,7 @@ body {
    
 }
 
-@media (min-width: 1024px){
-  body{
-   margin-left: 400px;
-   margin-right: 400px;
-  }
-}
+
 
 
 /* ------------------- HEADER ------------------- */
