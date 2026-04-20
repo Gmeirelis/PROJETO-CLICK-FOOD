@@ -39,10 +39,10 @@ body {
 
   .header {
   display: flex;
+
   align-items: center;
   padding: 15px 25px;
-  margin-left: 400px;
-  margin-right: 400px;
+  
 }
   .logo-img {
   width: 150px;
