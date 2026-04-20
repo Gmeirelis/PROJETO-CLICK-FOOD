@@ -60,7 +60,7 @@ body {
 /*desktop*/
 @media (min-width: 1024px){
  .bemVindo{
- 
+   border: 1px solid black
   display: flex;
 
 }
