@@ -59,7 +59,7 @@ body {
 }
 /*desktop*/
 @media (min-width: 1024px){
- .bemVindo{
+ .boasVindas{
    border: 1px solid black
   display: flex;
 
