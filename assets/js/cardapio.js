@@ -8,8 +8,18 @@ let restaurante = null;
 let categoriaAtiva = "todos";
 
 async function buscarDados() {
- const response = await fetch("../restaurante.json")
-  return await response.json();
+  try {
+    const response = await fetch("../restaurante.json");
+    
+    // É importante verificar se a requisição foi bem sucedida (status 200-299)
+    if (!response.ok) {
+      throw new Error(`Erro ao carregar o JSON: ${response.status}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Erro na busca de dados:", error);
+  }
 }
 
 
