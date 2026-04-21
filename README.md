@@ -27,7 +27,7 @@ O Click iFood é um projeto de aplicação web inspirado no funcionamento do iFo
 - CSS3
 - JavaScript (ES6+)
 - JSON
-- Fetch API (se aplicável)
+- Firebase
 - GitHub
 
 # 📸 Screenshots
