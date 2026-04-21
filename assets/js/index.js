@@ -21,13 +21,13 @@
     card.classList.add("restaurante");//Adiciona a classe CSS "restaurante", permitindo que estilize esse cartão depois.
    
      //define o que vai aparecer dentro da div.
-    card.innerHTML = `                                            
-     ${restaurante.link ? `<a href="${restaurante.link}" target="_blank" rel="noopener noreferrer">` : ""}
-        <img src="${restaurante.imagem}" alt="${restaurante.nome}">
-        <h3>${restaurante.nome}</h3>
-        <p>⭐ ${restaurante.nota} • ${restaurante.categoria} • ${restaurante.tempo}</p>
-      ${restaurante.link ? `</a>` : ""}
-    `;//Ele puxa as informações dinâmicas: ${restaurante.imagem}, ${restaurante.nome}, ${restaurante.nota}, etc
+    card.innerHTML = `
+  <a href="/pages/cardapio.html?id=${restaurante.id}">
+    <img src="${restaurante.imagem}" alt="${restaurante.nome}">
+    <h3>${restaurante.nome}</h3>
+    <p>⭐ ${restaurante.nota} • ${restaurante.tipo} • ${restaurante.tempo}</p>
+  </a>
+`;
     container.appendChild(card);//o comando appendChild pega aquela div que foi montada na memória e a coloca fisicamente dentro do container no seu site.
 
        
@@ -142,8 +142,6 @@ const introducao = document.querySelector('.bemVindo');
 
 
 function boasvinda(){
-
-
   const hora = new Date().getHours();
 
   if (hora >= 5 && hora < 12) {
