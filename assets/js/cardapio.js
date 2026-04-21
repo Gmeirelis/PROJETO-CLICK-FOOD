@@ -33,7 +33,7 @@ function renderizarHome() {
   const home = document.querySelector(".container-restaurante");
 
   home.innerHTML = `
- <img src="./assets/img/restaurantes/${restaurante.imagem}" alt="${restaurante.nome}">
+ <img src="${restaurante.imagem}" alt="${restaurante.nome}">
     <div class="titulo">
       <h2>${restaurante.nome}</h2>
       <p>
