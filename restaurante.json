@@ -16,7 +16,7 @@
             "nome": "Combo Tradicional Japonês",
             "descricao": "Salmão e atum frescos em seleção especial de sushis e sashimis.",
             "valor": 25.0,
-            "imagem": "assets/img/produto/combo-japonesa.jpg"
+            "imagem": "./assets/img/produto/combo-japonesa.jpg"
           },
           {
             "id": 201,
