@@ -16,28 +16,28 @@
             "nome": "Combo Tradicional Japonês",
             "descricao": "Salmão e atum frescos em seleção especial de sushis e sashimis.",
             "valor": 25.0,
-            "imagem": "../assets/img/produto/combo-japonesa.jpg"
+            "imagem": "./assets/img/produto/combo-japonesa.jpg"
           },
           {
             "id": 201,
             "nome": "Combo Samurai",
             "descricao": "Seleção premium com hot rolls e sashimis especiais.",
             "valor": 25.0,
-            "imagem": "../assets/img/produto/combo-japonesa-2.jpg"
+            "imagem": "./assets/img/produto/combo-japonesa-2.jpg"
           },
           {
             "id": 202,
             "nome": "Combo Sensações do Oriente",
             "descricao": "Experiência completa com variedade oriental.",
             "valor": 50.0,
-            "imagem": "../assets/img/produto/combo-japonesa-3.jpg"
+            "imagem": "./assets/img/produto/combo-japonesa-3.jpg"
           },
           {
             "id": 203,
             "nome": "Combo Imperial",
             "descricao": "Seleção especial da casa com ingredientes premium.",
             "valor": 78.0,
-            "imagem": "../assets/img/produto/combo-japonesa-4.jpg"
+            "imagem": "./assets/img/produto/combo-japonesa-4.jpg"
           }
         ]
       },
@@ -49,14 +49,14 @@
             "nome": "Sushi Hot Roll",
             "descricao": "Hot roll crocante com recheio especial.",
             "valor": 35.0,
-            "imagem": "../assets/img/produto/sushi.jpg"
+            "imagem": "./assets/img/produto/sushi.jpg"
           },
           {
             "id": 205,
             "nome": "Sushi com Camarão",
             "descricao": "Sushi fresco com camarão selecionado.",
             "valor": 35.0,
-            "imagem": "../assets/img/produto/sushi-3.jpg"
+            "imagem": "./assets/img/produto/sushi-3.jpg"
           }
         ]
       },
@@ -68,14 +68,14 @@
             "nome": "Lamen Caprichado",
             "descricao": "Caldo encorpado com ingredientes especiais.",
             "valor": 35.0,
-            "imagem": "../assets/img/produto/lamem-2.jpg"
+            "imagem": "./assets/img/produto/lamem-2.jpg"
           },
           {
             "id": 207,
             "nome": "Lamen Simples",
             "descricao": "Tradicional e saboroso.",
             "valor": 35.0,
-            "imagem": "../assets/img/produto/lamen.jpg"
+            "imagem": "./assets/img/produto/lamen.jpg"
           }
         ]
       },
@@ -87,14 +87,14 @@
             "nome": "Coca-Cola",
             "descricao": "Refrigerante lata 350ml.",
             "valor": 8.0,
-            "imagem": "../assets/img/produto/coca.jpg"
+            "imagem": "./assets/img/produto/coca.jpg"
           },
           {
             "id": 209,
             "nome": "Chá Gelado",
             "descricao": "Refrescante e natural.",
             "valor": 10.0,
-            "imagem": "../assets/img/produto/cha.jpg"
+            "imagem": "./assets/img/produto/cha.jpg"
           }
         ]
       }
