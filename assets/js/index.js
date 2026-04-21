@@ -22,7 +22,7 @@
    
      //define o que vai aparecer dentro da div.
     card.innerHTML = `
-  <a href="../pages/cardapio.html?id=${restaurante.id}">
+  <a href="./pages/cardapio.html?id=${restaurante.id}">
     <img src="${restaurante.imagem}" alt="${restaurante.nome}">
     <h3>${restaurante.nome}</h3>
     <p>⭐ ${restaurante.nota} • ${restaurante.tipo} • ${restaurante.tempo}</p>
