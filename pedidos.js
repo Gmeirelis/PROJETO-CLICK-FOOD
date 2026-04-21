@@ -34,7 +34,7 @@ function adicionarAoCarrinho(id) {
 
   carrinho.push(itemSelecionado);
   localStorage.setItem("carrinho", JSON.stringify(carrinho));
-  window.location.href = "pedido.html"; // Caminho simplificado
+  window.location.href = "./pedido.html"; // Caminho simplificado
 }
 
 // --- LÓGICA DA PÁGINA DE PEDIDOS ---
