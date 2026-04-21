@@ -16,7 +16,7 @@
             "nome": "Combo Tradicional Japonês",
             "descricao": "Salmão e atum frescos em seleção especial de sushis e sashimis.",
             "valor": 25.0,
-            "imagem": "./assets/img/produto/combo-japonesa.jpg"
+            "imagem": "assets/img/produto/combo-japonesa.jpg"
           },
           {
             "id": 201,
@@ -117,28 +117,28 @@
             "nome": "Combo Tradicional",
             "descricao": "Hambúrguer + Coca-Cola",
             "valor": 20.0,
-            "imagem": "../assets/img/produto/hamburg-combo1.jpg"
+            "imagem": "assets/img/produto/hamburg-combo1.jpg"
           },
           {
             "id": 101,
             "nome": "Combo Triplo",
             "descricao": "Hambúrguer, Coca-Cola e Batata Frita",
             "valor": 30.0,
-            "imagem": "../assets/img/produto/hamburg-combo2.jpg"
+            "imagem": "assets/img/produto/hamburg-combo2.jpg"
           },
           {
             "id": 102,
             "nome": "Big Combo",
             "descricao": "Dois hambúrgueres, batata frita e refrigerante",
             "valor": 50.0,
-            "imagem": "../assets/img/produto/hambrug-combo3.jpg"
+            "imagem": "assets/img/produto/hambrug-combo3.jpg"
           },
           {
             "id": 103,
             "nome": "Combo King",
             "descricao": "Quatro hambúrgueres, batata frita e refrigerante",
             "valor": 78.0,
-            "imagem": "../assets/img/produto/hamburg-combo4jpg.jpg"
+            "imagem": "assets/img/produto/hamburg-combo4jpg.jpg"
           }
         ]
       },
@@ -150,28 +150,28 @@
             "nome": "Hambúrguer Duas Carnes",
             "descricao": "Carne, alface, cheddar, pão, tomate e picles",
             "valor": 15.0,
-            "imagem": "../assets/img/produto/hamburg-combo1.jpg"
+            "imagem": "assets/img/produto/hamburg-combo1.jpg"
           },
           {
             "id": 105,
             "nome": "Hambúrguer com Bacon",
             "descricao": "Pão, cheddar, bacon e molho especial",
             "valor": 25.0,
-            "imagem": "../assets/img/produto/hamburgbacomjpg.jpg"
+            "imagem": "assets/img/produto/hamburgbacomjpg.jpg"
           },
           {
             "id": 106,
             "nome": "Hambúrguer de Frango",
             "descricao": "Pão, salada, molho e queijo",
             "valor": 28.0,
-            "imagem": "../assets/img/produto/hamburgfrango.jpg"
+            "imagem": "assets/img/produto/hamburgfrango.jpg"
           },
           {
             "id": 107,
             "nome": "Hambúrguer Double Frango",
             "descricao": "Pão, cheddar, queijo, frango e picles",
             "valor": 35.0,
-            "imagem": "../assets/img/produto/hamburgdouble.jpg"
+            "imagem": "assets/img/produto/hamburgdouble.jpg"
           }
         ]
       },
@@ -183,21 +183,21 @@
             "nome": "Batata Frita",
             "descricao": "Porção crocante",
             "valor": 5.0,
-            "imagem": "../assets/img/produto/acompanhamento1.jpg"
+            "imagem": "assets/img/produto/acompanhamento1.jpg"
           },
           {
             "id": 109,
             "nome": "Batata Recheada",
             "descricao": "Recheio especial da casa",
             "valor": 18.0,
-            "imagem": "../assets/img/produto/acompanhamnto2.jpg"
+            "imagem": "assets/img/produto/acompanhamnto2.jpg"
           },
           {
             "id": 110,
             "nome": "Rosca Recheada",
             "descricao": "Massa artesanal com recheio especial",
             "valor": 12.0,
-            "imagem": "../assets/img/produto/acompanhemto3.jpg"
+            "imagem": "assets/img/produto/acompanhemto3.jpg"
           }
         ]
       },
@@ -209,14 +209,14 @@
             "nome": "Chocolate",
             "descricao": null,
             "valor": 18.0,
-            "imagem": "../assets/img/produto/milk1.jpg"
+            "imagem": "assets/img/produto/milk1.jpg"
           },
           {
             "id": 112,
             "nome": "Morango",
             "descricao": null,
             "valor": 18.0,
-            "imagem": "../assets/img/produto/milk2.jpg"
+            "imagem": "assets/img/produto/milk2.jpg"
           }
         ]
       },
@@ -228,14 +228,14 @@
             "nome": "Pudim",
             "descricao": null,
             "valor": 14.0,
-            "imagem": "../assets/img/produto/sobre1.jpg"
+            "imagem": "assets/img/produto/sobre1.jpg"
           },
           {
             "id": 114,
             "nome": "Sorvete",
             "descricao": null,
             "valor": 8.0,
-            "imagem": "../assets/img/produto/sobre2.jpg"
+            "imagem": "assets/img/produto/sobre2.jpg"
           }
         ]
       }
@@ -258,28 +258,28 @@
         "nome": "Churrasco",
         "descricao": "Churrasco acompanhado com arroz, feijão, farofa, salada e vinagrete",
         "valor": 20.0,
-        "imagem": "../assets/img/produto/churrasco.jpg" 
+        "imagem": "assets/img/produto/churrasco.jpg" 
       },
       {
         "id": 401,
         "nome": "Cozidão",
         "descricao": "Cozidão de carne com verduras batata e cenoura",
         "valor": 23.0,
-        "imagem": "../assets/img/produto/cozidão.jpg"
+        "imagem": "assets/img/produto/cozidão.jpg"
       },
       {
         "id": 402,
         "nome": "Sobrecoxa de Frango",
         "descricao": "Sobrecoxa de frango assado, arroz, farofa, salada e molho da casa",
         "valor": 15.0,
-        "imagem":"../assets/img/produto/frango.jpg"
+        "imagem":"assets/img/produto/frango.jpg"
       },
       {
         "id": 403,
         "nome": "Bife",
         "descricao": "Bife, arroz, salada, feijão e batata frita",
         "valor": 25.0,
-        "imagem": "../assets/img/produto/bife.jpg"
+        "imagem": "assets/img/produto/bife.jpg"
       }
     ]
   },
@@ -291,14 +291,14 @@
         "nome": "Água Mineral",
         "descricao": "Água mineral natural",
         "valor": 5.0,
-        "imagem":"../assets/img/produto/agua.jpg"
+        "imagem":"assets/img/produto/agua.jpg"
       },
       {
         "id": 405,
         "nome": "Coca-Cola 1L",
         "descricao": "Refrigerante Coca-Cola 1 litro",
         "valor": 18.0,
-        "imagem": "../assets/img/produto/coca.jpg"
+        "imagem": "assets/img/produto/coca.jpg"
       }
     ]
   },
@@ -310,14 +310,14 @@
         "nome": "Pudim",
         "descricao": "Pudim tradicional",
         "valor": 14.0,
-        "imagem": "../assets/img/produto/sobre1.jpg"
+        "imagem": "assets/img/produto/sobre1.jpg"
       },
       {
         "id": 407,
         "nome": "Sorvete",
         "descricao": "Sorvete simples",
         "valor": 8.0,
-        "imagem": "../assets/img/produto/sobre2.jpg" 
+        "imagem": "assets/img/produto/sobre2.jpg" 
       }
     ]
   }
@@ -341,28 +341,28 @@
         "nome": "Açaí 200ml",
         "descricao": "2 acompanhamentos, 1 calda, 2 frutas",
         "valor": 15.0,
-        "imagem": "../assets/img/produto/acai200ml.jpg"
+        "imagem": "assets/img/produto/acai200ml.jpg"
       },
       {
         "id": 301,
         "nome": "Açaí 300ml",
         "descricao": "3 acompanhamentos, 2 caldas, 3 frutas",
         "valor": 20.0,
-        "imagem": "../assets/img/produto/acai300ml.jpg"
+        "imagem": "assets/img/produto/acai300ml.jpg"
       },
       {
         "id": 302,
         "nome": "Açaí 500ml",
         "descricao": "4 acompanhamentos, 3 caldas, 4 frutas",
         "valor": 25.0,
-        "imagem": "../assets/img/produto/acai500ml.jpg"
+        "imagem": "assets/img/produto/acai500ml.jpg"
       },
       {
         "id": 303,
         "nome": "Açaí 1L",
         "descricao": "5 acompanhamentos, 4 caldas, 5 frutas",
         "valor": 30.0,
-        "imagem": "../assets/img/produto/acai1l.jpg"
+        "imagem": "assets/img/produto/acai1l.jpg"
       }
     ]
   },
@@ -374,21 +374,21 @@
         "nome": "Sorvete Chocolate",
         "descricao": "Sorvete sabor chocolate",
         "valor": 15.0,
-        "imagem": "../assets/img/produto/sorvete1.jpg"
+        "imagem": "assets/img/produto/sorvete1.jpg"
       },
       {
         "id": 305,
         "nome": "Sorvete Morango",
         "descricao": "Sorvete sabor morango",
         "valor": 25.0,
-        "imagem": "../assets/img/produto/sorvete2.jpg"
+        "imagem": "assets/img/produto/sorvete2.jpg"
       },
       {
         "id": 306,
         "nome": "Sorvete Creme",
         "descricao": "Sorvete sabor creme",
         "valor": 28.0,
-        "imagem": "../assets/img/produto/sorvete3.jpg"
+        "imagem": "assets/img/produto/sorvete3.jpg"
       }
     ]
   },
@@ -400,28 +400,28 @@
         "nome": "Milkshake Chocolate",
         "descricao": "Milkshake sabor chocolate",
         "valor": 35.0,
-        "imagem": "../assets/img/produto/milk1.jpg"
+        "imagem": "assets/img/produto/milk1.jpg"
       },
       {
         "id": 308,
         "nome": "Milkshake Morango",
         "descricao": "Milkshake sabor morango",
         "valor": 35.0,
-        "imagem": "../assets/img/produto/milk2.jpg"
+        "imagem": "assets/img/produto/milk2.jpg"
       },
       {
         "id": 309,
         "nome": "Milkshake Açaí",
         "descricao": "Milkshake sabor açaí",
         "valor": 35.0,
-        "imagem": "../assets/img/produto/milk3.jpg"
+        "imagem": "assets/img/produto/milk3.jpg"
       },
       {
         "id": 310,
         "nome": "Milkshake Oreo",
         "descricao": "Milkshake sabor oreo",
         "valor": 35.0,
-        "imagem": "../assets/img/produto/milk44.jpg"
+        "imagem": "assets/img/produto/milk44.jpg"
       }
     ]
   },
@@ -433,28 +433,28 @@
         "nome": "Pudim",
         "descricao": "Pudim tradicional",
         "valor": 14.0,
-        "imagem": "../assets/img/produto/sobre1.jpg"
+        "imagem": "assets/img/produto/sobre1.jpg"
       },
       {
         "id": 312,
         "nome": "Sorvete",
         "descricao": "Sorvete simples",
         "valor": 8.0,
-        "imagem": "../assets/img/produto/sobre2.jpg"
+        "imagem": "assets/img/produto/sobre2.jpg"
       },
       {
         "id": 313,
         "nome": "Bolo",
         "descricao": "Fatia de bolo",
         "valor": 15.0,
-        "imagem": "../assets/img/produto/sobre3.jpg"
+        "imagem": "assets/img/produto/sobre3.jpg"
       },
       {
         "id": 314,
         "nome": "Brownie Nutella",
         "descricao": "Brownie com nutella",
         "valor": 10.0,
-        "imagem": "../assets/img/produto/sobre4.jpg"
+        "imagem": "assets/img/produto/sobre4.jpg"
       }
     ]
   },
@@ -466,28 +466,28 @@
         "nome": "Água",
         "descricao": "Água mineral",
         "valor": 5.0,
-        "imagem": "../assets/img/produto/agua.jpg"
+        "imagem": "assets/img/produto/agua.jpg"
       },
       {
         "id": 316,
         "nome": "Coca-Cola",
         "descricao": "Refrigerante Coca-Cola",
         "valor": 8.0,
-        "imagem": "../assets/img/produto/coca.jpg"
+        "imagem": "assets/img/produto/coca.jpg"
       },
       {
         "id": 317,
         "nome": "Chá Gelado",
         "descricao": "Chá gelado natural",
         "valor": 7.0,
-        "imagem": "../assets/img/produto/cha.jpg"
+        "imagem": "assets/img/produto/cha.jpg"
       },
       {
         "id": 318,
         "nome": "Sucos Naturais",
         "descricao": "Sucos feitos com frutas naturais",
         "valor": 10.0,
-        "imagem": "../assets/img/produto/sucos.jpg"
+        "imagem": "assets/img/produto/sucos.jpg"
       }
     ]
   }

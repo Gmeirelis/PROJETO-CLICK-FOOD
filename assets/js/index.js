@@ -8,6 +8,8 @@
     renderizarListaderestaurante(restaurantes)
  })
 
+ 
+
 
  /* Função para renderizar restaurantes*/
 
