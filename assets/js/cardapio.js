@@ -3,15 +3,13 @@ const idRestaurante = params.get("id");
 
 console.log("ID recebido:", idRestaurante);
 
-
 let restaurante = null;
 let categoriaAtiva = "todos";
 
 async function buscarDados() {
   try {
     const response = await fetch("../restaurante.json");
-    
-    // É importante verificar se a requisição foi bem sucedida (status 200-299)
+
     if (!response.ok) {
       throw new Error(`Erro ao carregar o JSON: ${response.status}`);
     }
@@ -22,17 +20,14 @@ async function buscarDados() {
   }
 }
 
-
 async function init() {
   const dados = await buscarDados();
-  restaurante = dados.find(d => d.id == idRestaurante);
+  restaurante = dados.find((d) => d.id == idRestaurante);
 
   renderizarHome();
   renderizarFiltros();
   renderizarCardapio();
 }
-
-
 
 function renderizarHome() {
   const home = document.querySelector(".container-restaurante");
@@ -49,12 +44,12 @@ function renderizarHome() {
   `;
 }
 function renderizarFiltros() {
-  const filtros = document.querySelector('.container-categorias');
+  const filtros = document.querySelector(".container-categorias");
   const categorias = restaurante.cardapio || [];
 
   let html = `<a data-categoria="todos">Todos</a>`;
 
-  categorias.forEach(cat => {
+  categorias.forEach((cat) => {
     html += `
       <a data-categoria="${cat.categoria}">
         ${cat.categoria}
@@ -64,28 +59,27 @@ function renderizarFiltros() {
 
   filtros.innerHTML = html;
 
-  adicionarEventosFiltros(); 
+  adicionarEventosFiltros();
 }
 
 function adicionarEventosFiltros() {
-  const botoes = document.querySelectorAll('.container-categorias a');
+  const botoes = document.querySelectorAll(".container-categorias a");
 
-  botoes.forEach(botao => {
-    botao.addEventListener('click', () => {
+  botoes.forEach((botao) => {
+    botao.addEventListener("click", () => {
       categoriaAtiva = botao.dataset.categoria;
 
-      renderizarCardapio(); 
+      renderizarCardapio();
     });
   });
 }
 
 function renderizarCardapio() {
-  const container = document.querySelector('.cardapio-container');
+  const container = document.querySelector(".cardapio-container");
 
   let html = "";
 
-  restaurante.cardapio.forEach(categoria => {
-
+  restaurante.cardapio.forEach((categoria) => {
     if (categoriaAtiva !== "todos" && categoria.categoria !== categoriaAtiva) {
       return;
     }
@@ -95,18 +89,20 @@ function renderizarCardapio() {
         <h1>${categoria.categoria}</h1>
     `;
 
-    categoria.itens.forEach(item => {
+    categoria.itens.forEach((item) => {
       html += `
       <section class="cardapio">
         <div class="cardapio-item">
-          <img src="${item.imagem || ''}">
+          <img src="${item.imagem || ""}">
           <div class="cardapio-info">
             <h2>${item.nome}</h2>
-            <p>${item.descricao || ''}</p>
-            <h3> ${Number(item.valor).toLocaleString('pt-BR', {
-  style: 'currency',
-  currency: 'BRL'
-}) || ''}</h3>
+            <p>${item.descricao || ""}</p>
+            <h3> ${
+              Number(item.valor).toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL",
+              }) || ""
+            }</h3>
              <button onclick="adicionarAoCarrinho(${item.id})">Adicionar</button>
           </div>
         </div>
