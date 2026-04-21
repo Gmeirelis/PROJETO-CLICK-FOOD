@@ -8,7 +8,7 @@ let restaurante = null;
 let categoriaAtiva = "todos";
 
 async function buscarDados() {
-  const response = await fetch("./restaurante.json");
+ const response = fetch("/PROJETO-CLICK-FOOD/restaurante.json")
   return await response.json();
 }
 
