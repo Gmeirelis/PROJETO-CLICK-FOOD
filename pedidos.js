@@ -3,7 +3,7 @@ let restaurantes = [];
 async function carregarDados() {
   try {
    
-    const resposta = await fetch("./restaurante.json"); 
+    const resposta = await fetch("restaurante.json"); 
     if (!resposta.ok) throw new Error(`Erro HTTP! status: ${resposta.status}`);
     restaurantes = await resposta.json();
     console.log("Restaurantes carregados", restaurantes);
