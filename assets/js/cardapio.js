@@ -8,7 +8,7 @@ let categoriaAtiva = "todos";
 
 async function buscarDados() {
   try {
-    const response = await fetch("../restaurante.json");
+    const response = await fetch("restaurante.json");
 
     if (!response.ok) {
       throw new Error(`Erro ao carregar o JSON: ${response.status}`);

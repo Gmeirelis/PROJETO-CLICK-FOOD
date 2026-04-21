@@ -103,11 +103,7 @@
   {
     "id": 2,
     "nome": "Burg Delicious",
-<<<<<<< HEAD
-    "imagem": "./assets/img/restaurantes/hamburg.png",
-=======
-    "imagem": "../assets/img/restaurantes/hamburg.png",
->>>>>>> c999c40bd5d7851366784d8d464dc3797b79ba7f
+    "imagem":"../assets/img/restaurantes/hamburg.png",
     "tipo": "Lanches e Bebidas",
     "nota": 4.5,
     "tempo": "30–40 min",
