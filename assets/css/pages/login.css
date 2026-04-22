@@ -109,12 +109,13 @@ body{
     height:400px; 
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    padding: 50px 20px;
+    padding: 50px 20px 40px;
+    gap: 300px;
       
   }
 
   .entrar{
-    gap: 700px;
+    gap: 40px;
 
   }
   .google-login {
