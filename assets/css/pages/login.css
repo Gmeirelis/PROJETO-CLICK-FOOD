@@ -24,7 +24,7 @@ body {
     background-color: #fff;
     width: 90%;
     max-width: 400px; 
-    padding: 40px;
+    padding: 60px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
@@ -108,8 +108,8 @@ input:focus {
 /* Responsividade para Desktop */
 @media (min-width: 1024px) {
     .login {
-        max-width: 450px;
-        padding: 60px; /* Mais respiro em telas grandes */
+        max-width: 500px;
+        padding: 80px; /* Mais respiro em telas grandes */
     }
     
     /* Removi o height: 400px fixo daqui para evitar o erro da imagem */
