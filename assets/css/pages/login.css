@@ -1,154 +1,116 @@
 * {
     margin: 0;
     padding: 0;
-    
-     font-family: 'Nunito', sans-serif;
+    box-sizing: border-box; /* Essencial para o padding não aumentar o tamanho da caixa */
+    font-family: 'Nunito', sans-serif;
 }
-body{
- background-color: #e99d0e;
-}
-.formularios {
-   
+
+body {
+    background-color: #e99d0e;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 90vh;
+}
+
+.formularios {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .login {
     background-color: #fff;
     width: 90%;
-    max-width: 300px;
-    padding: 30px 35px;
+    max-width: 400px; /* Aumentei um pouco para ficar mais elegante */
+    padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
-.error{
-    color: #db4437;
-    font-size: 10px;
 
-}
 .entrar {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
 }
 
 .entrar h1 {
     text-align: center;
-    font-size: 32px;
+    font-size: 28px;
+    color: #333;
     margin-bottom: 10px;
 }
 
 .entrar input {
-    height: 40px;
-    border: 1px solid #c5c5c5;
+    height: 50px;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    padding-left: 10px;
-    font-size: 14px;
+    padding: 0 15px;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
-
-
-.cadastro {
-    display: flex;
-    justify-content: space-between;
-    font-size: 11px;
+input:focus {
+    outline: none;
+    border-color: #e99d0e;
+    box-shadow: 0 0 0 2px rgba(233, 157, 14, 0.2);
 }
 
-.cadastro a {
-    text-decoration: none;
-    color: #444;
-    font-weight: 600;
+/* Estilização do Botão Principal */
+#btnEntrar {
+    background-color: #e99d0e;
+    color: white;
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.cadastro a:hover {
-    color: #e38700;
+#btnEntrar:hover {
+    background-color: #d68c0c;
 }
 
-/* BOTÃO GOOGLE */
 .google-login {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-
-    background-color: #eeeeee;
+    background-color: #f5f5f5;
     color: #444;
-    border: none;
+    border: 1px solid #ddd;
     padding: 12px;
-    border-radius: 8px;
-
-    font-size: 14px;
+    border-radius: 10px;
     font-weight: 600;
     cursor: pointer;
+}
 
+.cadastro {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.cadastro a {
+    text-decoration: none;
+    color: #666;
+    font-size: 13px;
     transition: 0.3s;
 }
 
-.google-login i {
-    font-size: 18px;
-    color: #db4437;
+.cadastro a:hover {
+    color: #e99d0e;
 }
 
-.google-login:hover {
-    background-color: #d6d6d6;
-}
-
+/* Responsividade para Desktop */
 @media (min-width: 1024px) {
-
-.formularios {
-    min-height: 80vh;
-    flex:1;
-  }
-
-  .login {
-    background-color: #fff;  
-    width: 70%; 
-    max-width: 300px; 
-    height:400px; 
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    padding: 50px 20px 40px;
-    gap: 30px;
-      
-  }
-
-  .entrar{
-    gap: 40px;
-
-  }
-  .google-login {
-    background-color: #b4b4b4;
-    font-size: 20px;
-  }
-
-  .cadastro a {
-    text-decoration: none;
-    color: #444;
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.entrar input {
-    height: 40px;
-    border: 1px solid #c5c5c5;
-    border-radius: 6px;
-    padding-left: 10px;
-    font-size: 20px;
-}
-
-
-.error{
-    color: #db4437;
-    font-size: 18px;
-    position: relative;
-    bottom: 50px;
-
-}
-
- input:focus {
-  outline: none; /* remove borda padrão do navegador */
-  border: 2px solid orange;
-}
+    .login {
+        max-width: 450px;
+        padding: 60px; /* Mais respiro em telas grandes */
+    }
+    
+    /* Removi o height: 400px fixo daqui para evitar o erro da imagem */
 }
