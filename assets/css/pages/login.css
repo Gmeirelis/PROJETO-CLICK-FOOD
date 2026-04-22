@@ -98,14 +98,14 @@ body{
 @media (min-width: 1024px) {
 
 .formularios {
-    min-height: 100vh;
+    min-height: 80vh;
   }
 
   .login {
     background-color: #fff;  
-    width: 100%; 
+    width: 70%; 
     max-width: 300px; 
-    height: auto; 
+    height:400px; 
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     padding: 60px 50px;
