@@ -44,6 +44,7 @@ body {
 
 .entrar input {
     height: 50px;
+    width:80px
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 0 15px;
@@ -109,8 +110,8 @@ input:focus {
 @media (min-width: 1024px) {
     .login {
         max-width: 700px;
-        padding: 80px; /* Mais respiro em telas grandes */
+        padding: 80px; 
     }
     
-    /* Removi o height: 400px fixo daqui para evitar o erro da imagem */
+ 
 }
