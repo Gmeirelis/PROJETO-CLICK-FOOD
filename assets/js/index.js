@@ -1,12 +1,19 @@
   /*********filtro resturante API **********************************/
+
+  import { getRestaurantes } from './api.js';
+  const BASE_URL = window.location.hostname.includes('github.io')
+  ? '/PROJETO-CLICK-FOOD'
+  : '';
+  
+
  let restaurantes = []
 
- fetch('restaurante.json').then(Response => Response.json()).then(dados =>{
-
-    restaurantes = dados 
-    renderizarRestaurantes(restaurantes);
-    renderizarListaderestaurante(restaurantes)
- })
+getRestaurantes().then(dados => {
+  restaurantes = dados;
+ console.log(dados)
+  renderizarRestaurantes(restaurantes);
+  renderizarListaderestaurante(restaurantes);
+});
 
  
 
@@ -24,14 +31,13 @@
    
      //define o que vai aparecer dentro da div.
     card.innerHTML = `
-  <a href="cardapio.html?id=${restaurante.id}">
-    <img src="${restaurante.imagem}" alt="${restaurante.nome}">
+  <a href="./pages/cardapio.html?id=${restaurante.id}">
+     <img src="${BASE_URL}/assets/img/${restaurante.imagem}" alt="${restaurante.nome}">
     <h3>${restaurante.nome}</h3>
     <p>⭐ ${restaurante.nota} • ${restaurante.tipo} • ${restaurante.tempo}</p>
   </a>
 `;
     container.appendChild(card);//o comando appendChild pega aquela div que foi montada na memória e a coloca fisicamente dentro do container no seu site.
-
        
   });
 
@@ -66,7 +72,7 @@ conatinerLista.innerHTML = " "
 
 const card = document.createElement('div')
 card.innerHTML = `
- <img src ="${restaurante.imagem}">
+ <img src="${BASE_URL}/assets/img/${restaurante.imagem}" alt="${restaurante.nome}">
 `
 conatinerLista.appendChild(card)
 

@@ -1,6 +1,11 @@
 const params = new URLSearchParams(window.location.search);
 const idRestaurante = params.get("id");
 
+const BASE_URL = window.location.hostname.includes('github.io')
+  ? '/PROJETO-CLICK-FOOD'
+  : '';
+
+
 console.log("ID recebido:", idRestaurante);
 
 let restaurante = null;
@@ -8,7 +13,7 @@ let categoriaAtiva = "todos";
 
 async function buscarDados() {
   try {
-    const response = await fetch("restaurante.json");
+     const response = await fetch(`${BASE_URL}/data/restaurante.json`);
 
     if (!response.ok) {
       throw new Error(`Erro ao carregar o JSON: ${response.status}`);
@@ -33,15 +38,16 @@ function renderizarHome() {
   const home = document.querySelector(".container-restaurante");
 
   home.innerHTML = `
- <img src="${restaurante.imagem}" alt="${restaurante.nome}">
-    <div class="titulo">
-      <h2>${restaurante.nome}</h2>
-      <p>
-        <i class="fa-solid fa-utensils"></i>
-        ${restaurante.tipo}
-      </p>
-    </div>
-  `;
+  <img src="${BASE_URL}/assets/img/${restaurante.imagem}" alt="${restaurante.nome}">
+
+  <div class="titulo">
+    <h2>${restaurante.nome}</h2>
+    <p>
+      <i class="fa-solid fa-utensils"></i>
+      ${restaurante.tipo}
+    </p>
+  </div>
+`;
 }
 function renderizarFiltros() {
   const filtros = document.querySelector(".container-categorias");
@@ -93,7 +99,7 @@ function renderizarCardapio() {
       html += `
       <section class="cardapio">
         <div class="cardapio-item">
-          <img src="${item.imagem || ""}">
+          <img src="${BASE_URL}/assets/img/${item.imagem}" alt="${item.nome}">
           <div class="cardapio-info">
             <h2>${item.nome}</h2>
             <p>${item.descricao || ""}</p>

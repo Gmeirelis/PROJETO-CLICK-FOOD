@@ -1,12 +1,16 @@
+
+  import { getRestaurantes } from './api.js';
+const BASE_URL = window.location.hostname.includes('github.io')
+  ? '/PROJETO-CLICK-FOOD'
+  : '';
+
 let restaurantes = [];
 
 async function carregarDados() {
   try {
-   
-    const resposta = await fetch("./restaurante.json"); 
-    if (!resposta.ok) throw new Error(`Erro HTTP! status: ${resposta.status}`);
-    restaurantes = await resposta.json();
+    restaurantes = await getRestaurantes();
     console.log("Restaurantes carregados", restaurantes);
+    console.log(restaurantes)
   } catch (error) {
     console.error("Erro ao carregar os dados:", error);
   }
@@ -15,12 +19,13 @@ async function carregarDados() {
 carregarDados();
 
 //--- FUNÇÃO ADICIONAR ---
-function adicionarAoCarrinho(id) {
+window.adicionarAoCarrinho = function (id) {
   let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
   let itemSelecionado = null;
 
   restaurantes.forEach((restaurante) => {
     if (!restaurante.cardapio) return;
+
     restaurante.cardapio.forEach((categoria) => {
       categoria.itens.forEach((item) => {
         if (item.id === id) {
@@ -34,8 +39,9 @@ function adicionarAoCarrinho(id) {
 
   carrinho.push(itemSelecionado);
   localStorage.setItem("carrinho", JSON.stringify(carrinho));
-  window.location.href = "pedido.html"; // Caminho simplificado
-}
+
+  window.location.href = `${BASE_URL}/pages/pedido.html`;
+};
 
 // --- LÓGICA DA PÁGINA DE PEDIDOS ---
 // Mudança aqui: verificamos se o elemento 'lista' existe na página em vez de olhar a URL
@@ -51,7 +57,7 @@ if (lista) {
     total += item.valor;
     lista.innerHTML += `
       <div class="item-pedido">
-        <div class="img-pedidos"><img src="${item.imagem}"></div>
+        <div class="img-pedidos"> <img src="${BASE_URL}/assets/img/${item.imagem}" alt="${item.nome}"></div>
         <div class="detalhes-pedidos">
           <h4>${item.nome}</h4>
           <p class="nome-res">${item.restaurante}</p>
@@ -72,10 +78,10 @@ if (botaoApagar && carrinho.length === 0) {
   botaoApagar.style.display = "none";
 }
 
-function limparCarrinho() {
+window.limparCarrinho = function () {
   localStorage.removeItem("carrinho");
   location.reload();
-}
+};
 
 // --- STATUS DO CARRINHO (Texto vazio) ---
 const textoStatus = document.querySelector(".titulos");
