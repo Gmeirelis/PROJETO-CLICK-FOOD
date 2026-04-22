@@ -97,22 +97,18 @@ body{
 
 @media (min-width: 1024px) {
 
-.formularios{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 70vh;
-}
-
+.formularios {
+    min-height: 100vh;
+  }
 
   .login {
     background-color: #fff;  
-    width: 500px;
-     height: auto;
+    width: 100%; 
+    max-width: 500px; 
+    height: auto; 
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    padding: 80px;
-   
+    padding: 60px 50px;
   }
 
   .entrar{
