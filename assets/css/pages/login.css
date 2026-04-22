@@ -99,6 +99,7 @@ body{
 
 .formularios {
     min-height: 80vh;
+    flex:1;
   }
 
   .login {
