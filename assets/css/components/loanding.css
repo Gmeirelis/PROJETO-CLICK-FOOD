@@ -3,16 +3,20 @@
 
   /* botão base */
 #btnEntrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   height: 45px;
   width: 100%;
   border: none;
   border-radius: 8px;
-  background-color: #eba03e;
+  background-color: #f38c06;
   color: white;
   font-size: 16px;
   cursor: pointer;
   overflow: hidden;
+    text-align: center;
 }
 
 /* texto */

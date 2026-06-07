@@ -1,0 +1,30 @@
+[
+    {
+        "nome": "guilherme",
+        "sobrenome":"meireles",
+        "email": "gmeirelis8@gmail.com",
+        "senha":"123456",
+        "endereco":[
+            {
+                "rua":"rua jose renato hadad",
+                "numero":262,
+                "bairro": "são bento",
+                "cep":"69315650"
+            }
+        ]
+    },
+    {
+        "nome": "usuario",
+        "sobrenome":"usuario",
+        "email": "usuario@gmail.com",
+        "senha":"123456",
+        "endereco":[
+            {
+                "rua":"rua jose silva",
+                "numero":262,
+                "bairro": "são bento",
+                "cep":"6931850"
+            }
+        ]
+    }
+]

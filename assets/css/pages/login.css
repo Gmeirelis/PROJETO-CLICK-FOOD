@@ -5,52 +5,82 @@
     font-family: 'Nunito', sans-serif;
 }
 
+
 body {
-    background-color: #e99d0e;
-    min-height: 100vh;
+  background: white;
+   opacity: 0;
+    transition: opacity 0.8s ease;
+}
+body.loaded {
+    opacity: 1;
+}
+
+
+main{
     display: flex;
-    align-items: center;
     justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    height: 100vh;
 }
+/*form*/
 
-.formularios {
+.formularios{ /*container*/
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 400px;
+    min-height: 400px;
+    gap: 40px;
+    padding: 25px;
+    border-radius: 12px;
+     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
 }
-
-.login {
-    background-color: #fff;
-    width: 90%;
-    max-width: 600px; 
-    padding: 60px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+.perfil{
+    width: 80px;
 }
+ .formularios h1{
+    font-size: 40px;
+ }
 
-.entrar {
+ .formularios p{
+color: #666;
+ }
+
+ .formularios input{
+    border:1px solid rgb(214, 212, 212);
+    max-width: 500px;
+    font-size: 15px;
+    height: 50px;
+    border-radius: 10px;
+ }
+.inputs{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   width: 100%;
+}
+.texto{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    
 }
 
-.entrar h1 {
-    text-align: center;
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 10px;
+::placeholder {
+
+  color: #999;
+
+  font-style: italic;
+
+  opacity: 0.7; /* Define a transparência */
+
 }
 
-.entrar input {
-    height: 50px;
-    width:80px
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 0 15px;
-    font-size: 16px;
-    transition: 0.3s;
-}
 
 input:focus {
     outline: none;
@@ -58,9 +88,33 @@ input:focus {
     box-shadow: 0 0 0 2px rgba(233, 157, 14, 0.2);
 }
 
+
+.dividir{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+}
+
+.dividir::before,
+.dividir::after{
+content: " ";
+flex: 1;
+border-bottom: 1px solid #ddd;
+}
+
+
+    .dividir::before{
+        margin-right: 10px;
+    }
+    .dividir::after{
+        margin-left: 10px;
+    }
+
 /* Estilização do Botão Principal */
-#btnEntrar {
-    background-color: #e99d0e;
+#btnEntrar{
+   
     color: white;
     border: none;
     height: 50px;
@@ -71,28 +125,40 @@ input:focus {
     transition: 0.3s;
 }
 
-#btnEntrar:hover {
-    background-color: #d68c0c;
-}
-
+/*entra google e apple*/
 .google-login {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     color: #444;
     border: 1px solid #ddd;
     padding: 12px;
     border-radius: 10px;
     font-weight: 600;
     cursor: pointer;
+    min-width: 190px;
+
+}
+.google{
+    width: 20px;
+}
+.redes{
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+    flex-direction: row;
+    width: 100%;
 }
 
+/*****************************/
 .cadastro {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin-top: 10px;
+    gap: 10px;
 }
 
 .cadastro a {
@@ -114,4 +180,92 @@ input:focus {
     }
     
  
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     width: 100%;
+     height: 100vh;
+     background-color: #f1f1f1;
+     flex: 1;
+}
+
+.banner{
+ display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     width: 100%;
+     height: 100vh;
+     background-color: #f08e0e;
+     flex: 1;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px 0px 10px;
+}
+
+.container h1{
+    color: white;
+    font-size: 60px;
+    width: 800px;
+}
+
+.motoboy{
+    width: 450px;
+}
+
+@media (max-width: 600px){
+.banner{
+    display: none;
+}
+}
+
+/* reaload*/
+
+#btnEntrar{
+  width: 150px;
+  height: 45px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.loader{
+  width: 18px;
+  height: 18px;
+  border: 3px solid white;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+
+  display: none;
+
+  animation: loading 0.8s linear infinite;
+}
+
+#btnEntrar.loading .loader{
+  display: block;
+}
+
+#btnEntrar.loading .texto{
+  display: none;
+}
+
+@keyframes loading{
+  100%{
+    transform: rotate(360deg);
+  }
 }

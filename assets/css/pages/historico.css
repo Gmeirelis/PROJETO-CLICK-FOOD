@@ -1,0 +1,199 @@
+/* ------------------- GLOBAL ------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 70%;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100%;
+}
+/*header */
+
+/*desktop*/
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    max-width: 50%;
+    padding: 25px;
+  }
+
+  header h1 {
+    color: white;
+  }
+}
+
+/*mobile*/
+header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: orange;
+  width: 100%;
+  padding: 15px;
+  gap: 20px;
+}
+
+header h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.fa-chevron-left {
+  color: white;
+}
+
+/* ultimos restaurante */
+
+/*seção*/
+
+/*mobile*/
+.ultimosRestaurante{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 40vh;
+  margin-top: 70px;
+  min-height: auto;
+
+  
+}
+.ultimo {
+  display: flex;
+  margin-top: 60px;
+  flex-direction: column;
+  height: 600px;
+  overflow-y: auto;
+  gap: 0px;
+}
+
+.title {
+  display: flex;
+  justify-content: start;
+}
+
+/*desktop*/
+@media (min-width: 1024px) {
+  .ultimosRestaurante {
+    display: flex;
+    position: relative;
+    right: 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 800px;
+    margin-top: 70px;
+  
+  }
+
+  .ultimo {
+    display: flex;
+    margin-top: 60px;
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+
+/*card de renderização*/
+
+/*mobile*/
+
+.renderizar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+}
+
+.card-pedidos {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-left: 5px solid #ffa500;
+}
+
+.card-pedidos h4 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-pedidos p {
+  margin: 4px 0;
+  color: #444;
+  font-size: 14px;
+}
+
+.status {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.data {
+  color: #777;
+  font-size: 12px;
+}
+
+/* desktop*/
+@media (min-width: 1024px) {
+
+
+  .renderizar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+ 
+  width: 800px;
+}
+
+.card-pedidos {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-left: 5px solid #ffa500;
+  width: 100%;
+}
+
+.card-pedidos h4 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-pedidos p {
+  margin: 4px 0;
+  color: #444;
+  font-size: 18px;
+}
+
+.status {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.data {
+  color: #777;
+  font-size: 16px;
+}
+
+}

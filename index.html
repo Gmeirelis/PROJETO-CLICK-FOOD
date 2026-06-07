@@ -11,30 +11,65 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="./assets/css/components/menu-inferior.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png"  href="assets/fivecon/favicon.ico">
+<link rel="manifest" href="/site.webmanifest">
 </head>
 
-<body>
+<body class="tela">
 
   <div class="container">
   <!-- HEADER -->
   <header class="header">
     <img class="logo-img" src="./assets/img/icons/iconeClickFood.png">
-    <nav class="menu">
+    <div class="menu">
       
     <span id="perfil" ></span>
-   
+    
 
-    </nav>
+    </div>
   </header>
+  <section class="container-caixas">
+     <div class="bemVindo"> </div>
+    <nav class="animate__animated animate__fadeIn">
+      <ul class="caixa">
+        <div class="suspenco">
+         <i class="fa-solid fa-gear"></i>
+          <a href="#">Configuração</a>
+          </div>
+          <div class="suspenco">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <a href="#">endereços</a>
+          </div>
+           <div class="suspenco">
+           <i class="fa-solid fa-circle-info"></i>
+          <a href="./pages/historico.html">Historico</a>
+          </div>
+          
+      </ul>
+    </nav>
+   </section>
 
   <main>
     <section class="boasVindas" >
 
-    <div class="bemVindo"> </div>
-
-   
-
     </section>
+
+ <!-- CARROSSEL -->
+   <section class="carrossel">
+    <ul class="slides">
+      <li class="slide ativo">
+        <img src="./assets/img/slides/pizza-promocao.jpeg" alt="Pizza">
+      </li>
+      <li class="slide">
+        <img src="./assets/img/slides/macarão.jpeg" alt="Macarrão">
+      </li>
+      <li class="slide">
+        <img src="./assets/img/slides/promoçao.png" alt="Promoção">
+      </li>
+    </ul>
+  </section>
 
     <!-- CATEGORIAS -->
     <section class="categorias">
@@ -84,20 +119,7 @@
 
 </section>
     
-   <!-- CARROSSEL -->
-   <section class="carrossel">
-    <ul class="slides">
-      <li class="slide ativo">
-        <img src="./assets/img/slides/pizza-promocao.jpeg" alt="Pizza">
-      </li>
-      <li class="slide">
-        <img src="./assets/img/slides/macarão.jpeg" alt="Macarrão">
-      </li>
-      <li class="slide">
-        <img src="./assets/img/slides/promoçao.png" alt="Promoção">
-      </li>
-    </ul>
-  </section>
+  
   
 
 
@@ -114,7 +136,9 @@
 </div>
 
     <!-- FILTROS -->
+      
    <section class="filtros">
+   
   <div class="filtro-menu">
     <button id="distancia-btn">Distância</button>
     <button id="tempo-btn">Tempo</button>
@@ -123,6 +147,7 @@
   </div>
 
   <div class="dropdown-menu" id="menu-distancia">
+    <h2>Distancia</h2>
   <label class="opcao">
     <input type="checkbox" value="10-20">
     10km – 20km
@@ -137,10 +162,12 @@
     <input type="checkbox" value="5-10">
     5km – 10km
   </label>
+
 </div>
 
 
 <div class="tempo-filtro" id="menu-filtro">
+  <h2>Tempo</h2>
   <label class="opcao">
     <input type="checkbox" value="10-20">
     30mn – 60mn
@@ -162,26 +189,25 @@
 
 
     <!-- LISTA DE RESTAURANTES -->
-     <div class="lojass">
-    <h1 class="titulo-secao">Lojas</h1>
-</div>
+    
 <!--renderização no index.js--->
+
     <section class="restaurantes" id="lista-restaurantes">
       
     </section>
-
+</div>
   </main>
 
   <!-- MENU INFERIOR -->
    <div id="container-inferior">
   <nav class="menu-inferior">
+    
     <a href="index.html" class="item ativo"><i class="fa-solid fa-house"></i><span>Início</span></a>
     <a href="./pages/busca.html" class="item"><i class="fa-solid fa-magnifying-glass"></i><span>Buscar</span></a>
     <a href="./pages/pedido.html" class="item"><i class="fa-solid fa-list"></i><span>Pedidos</span></a>
     <a href="./pages/perfil.html" class="item"><i class="fa-solid fa-user"></i><span>Perfil</span></a>
   </nav>
   </div>
-  
   <script type="module" src="./assets/js/index.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-  /*********filtro resturante API **********************************/
+/*********filtro resturante API **********************************/
 
   import { getRestaurantes } from './api.js';
   const BASE_URL = window.location.hostname.includes('github.io')
@@ -31,12 +31,23 @@ getRestaurantes().then(dados => {
    
      //define o que vai aparecer dentro da div.
     card.innerHTML = `
-  <a href="./pages/cardapio.html?id=${restaurante.id}">
-     <img src="${BASE_URL}/assets/img/${restaurante.imagem}" alt="${restaurante.nome}">
-    <h3>${restaurante.nome}</h3>
-    <p>⭐ ${restaurante.nota} • ${restaurante.tipo} • ${restaurante.tempo}</p>
-  </a>
+  <div class="restaurante-card">
+    <a href="./pages/cardapio.html?id=${restaurante.id}" class="link-wrapper">
+      <div class="container-img">
+        <img src="${BASE_URL}/assets/img/${restaurante.imagem}" alt="${restaurante.nome}">
+      </div>
+      <div class="container-descricao">
+        <h3>${restaurante.nome}</h3>
+        <p>
+          <span class="nota">★ ${restaurante.nota}</span> 
+          <span class="separador">•</span> ${restaurante.tipo} 
+          <span class="separador">•</span> ${restaurante.tempo}
+        </p>
+      </div>
+    </a>
+  </div>
 `;
+
     container.appendChild(card);//o comando appendChild pega aquela div que foi montada na memória e a coloca fisicamente dentro do container no seu site.
        
   });
@@ -164,31 +175,44 @@ function boasvinda(){
 }
 
 
-  const usu = JSON.parse(localStorage.getItem('usuario')) 
-
-
-function boasvida(){
-  if(usu){
-introducao.textContent = `${boasvinda()}, ${usu.nome}` ; 
-  }else{    
-introducao.textContent = `${boasvinda()}` ; 
-  }}
-
-boasvida()
-
+  
+ const suspenca = document.querySelector(".container-caixas");
+    suspenca.classList.add('none')
 
 function perfil() {
   const perfil = document.querySelector('#perfil');
-  const usu = JSON.parse(localStorage.getItem('usuario'));
+  const usu = JSON.parse(localStorage.getItem('usuarioLogado'));
+
 
   if (!usu) {
-    perfil.innerHTML = '<i class="fa-regular fa-user"></i> Minha conta';
-  } else {
-    perfil.innerHTML = `<i class="fa-solid fa-user"></i> ${usu.nome}`;
+    perfil.innerHTML = `
+    <div class="containerPerfil">
+    <i class="fa-regular fa-user"></i>
+    <p>Minha conta</p>
+     </div>`
+   
+    return;
   }
+
+  perfil.innerHTML = `
+  <div class ="conatinerFotodePerfil">
+  <img class="perfil" src="../assets/img/icons/conta-de-perfil.png">
+  <i class="fa-solid fa-chevron-down"></i>
+  </div>
+  `;
+
+  const botao = perfil.querySelector('.conatinerFotodePerfil');
+ 
+
+  botao.addEventListener('click', () => {
+    suspenca.classList.toggle('none'); 
+  });
 }
-perfil()
+
+perfil();
 
 
 
-
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+});

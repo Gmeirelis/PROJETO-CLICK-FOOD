@@ -6,9 +6,16 @@
    box-sizing: border-box;
 }
 
+
 body {
-  background: #ffffff;
+  background: white;
+   opacity: 0;
+    transition: opacity 0.8s ease;
 }
+body.loaded {
+    opacity: 1;
+}
+
 
 /* 
    CABEÇALHO

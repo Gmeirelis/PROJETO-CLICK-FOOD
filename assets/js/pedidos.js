@@ -29,7 +29,10 @@ window.adicionarAoCarrinho = function (id) {
     restaurante.cardapio.forEach((categoria) => {
       categoria.itens.forEach((item) => {
         if (item.id === id) {
-          itemSelecionado = { ...item, restaurante: restaurante.nome };
+          itemSelecionado = { ...item, restaurante: restaurante.nome,
+            
+
+          };
         }
       });
     });
@@ -101,3 +104,11 @@ const resumo = document.querySelector(".container-resumo");
 if (resumo && carrinho.length === 0) {
   resumo.classList.add("none");
 }
+
+
+/*efeito suavizçao*/
+
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+});
+/****************/

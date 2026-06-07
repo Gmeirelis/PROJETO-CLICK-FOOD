@@ -1,29 +1,58 @@
-import { autenticar } from "./authService.js";
+async function buscarUsuarios() {
+  try {
+    const api = await fetch("../data/usuarios.json");
+    const data = await api.json();
 
-const form = document.querySelector('.formularios'); 
-const emailInput = document.querySelector('.email'); 
-const senhaInput = document.querySelector('.password');
+    validar(data);
+  } catch (erro) {
+    console.error("Erro ao buscar usuários:", erro);
+  }
+}
+function validar(data) {
+  const form = document.querySelector(".formularios");
 
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-form.addEventListener('submit', async (event) => {
-    event.preventDefault(); 
+    const btnEntrar = document.querySelector("#btnEntrar");
 
-    try {
-        
-        const dados = await autenticar(emailInput.value, senhaInput.value);
+    btnEntrar.classList.add("loading");
 
-        
-        localStorage.setItem("usuario", JSON.stringify(dados));
-        
-        alert("Login realizado com sucesso!");
+    const senhaDigitada = document.querySelector(".password");
+    const emailDigitada = document.querySelector(".email");
 
-        setTimeout(() => {
-            window.location.href = "../index.html";
-        }, 1000);
+    const usuarioEncontrado = data.find((usuario) => {
+      return (
+        usuario.email === emailDigitada.value &&
+        usuario.senha === senhaDigitada.value
+      );
+    });
 
-    } catch (error) {
-  
-        alert(error.message); 
-        console.error("Erro no login:", error.message);
+    if (usuarioEncontrado) {
+      console.log("logado");
+      localStorage.setItem("usuarioLogado", JSON.stringify(usuarioEncontrado));
+      senhaDigitada.style.border = "2px solid green";
+      emailDigitada.style.border="2px solid green";
+
+      setTimeout(() => {
+        btnEntrar.classList.remove("loading");
+        window.location.href = "../index.html";
+      }, 4000);
+
+    } else {
+      btnEntrar.classList.remove("loading");
+      senhaDigitada.style.border = "2px solid red";
+        emailDigitada.style.border="2px solid red";
+      console.log("nao logado");
     }
+  });
+}
+
+/* criar persistencia de dados */
+
+buscarUsuarios();
+
+/*efeito suavização na pagina*/
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
 });

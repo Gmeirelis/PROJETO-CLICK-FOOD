@@ -8,10 +8,10 @@
       <link rel="stylesheet" href="../assets/css/components/menu-inferior.css">
     <title>perfil</title>
 </head>
-<body>
+<body onclick='pageTrasition.init()'>
     <header>
        <div class="perfil">
-         <img src="../assets/img/slides/freepik__upload__45.png" alt="">
+         <img src="../assets/img/icons/conta-de-perfil.png" alt="">
          <h1 id="nome">usuario</h1>
          <br>
         
@@ -104,12 +104,12 @@
 
     </main>
 
-    
+    <script src="../assets/css/components/transition.js"></script>
 </body>
 
 <script>
 
-const usu = JSON.parse(localStorage.getItem('usuario')) || null
+const usu = JSON.parse(localStorage.getItem('usuarioLogado')) || null
 const sair = document.querySelector('.logouf')
 
 sair.addEventListener('click', ()=>{
@@ -133,6 +133,9 @@ function nome(){
 }
 nome()
 
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+});
 
 
 

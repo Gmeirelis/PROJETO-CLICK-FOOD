@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/pages/pagamento.css">
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="../assets/css/components/loanding.css">
+    <title>Pagamento</title>
+</head>
+<body>
+    <header>
+        <h1>Sacola</h1>
+    </header>
+    <main>
+
+
+<span class="renerizar-endereco"></span>
+
+
+
+
+<section class="pagamento">
+  <h2>Forma de Pagamento</h2>
+  
+  <div class="opcoes-pagamento">
+    <div class="metodo-card" onclick="selecionarPagamento('pix',this)">
+      <i class="fas fa-pix"></i>
+      <span>Pix</span>
+    </div>
+
+    <div class="metodo-card" onclick="selecionarPagamento('cartao',this)">
+      <i class="fas fa-credit-card"></i>
+      <span>Cartão</span>
+    </div>
+
+    <div class="metodo-card" onclick="selecionarPagamento('dinheiro',this)">
+      <i class="fas fa-money-bill-wave"></i>
+      <span>Dinheiro</span>
+    </div>
+  </div>
+
+  <div id="campo-troco" style="display: none;">
+    <input type="number" placeholder="Troco para quanto?">
+  </div>
+</section>
+
+<span class="container-resumo"></span>
+
+<div class="container-finalizar">
+ <div class="btn-fechar">
+      <button id="btnEntrar">
+        <span class="texto" id="finisher">Finalizar compra</span>
+        <span class="loader"></span>
+      </button>
+    </div>
+</div>
+
+    </main>
+    <script src="../assets/js/pagamento.js"></script>
+    <script src="../assets/js/reload.js"></script>
+</body>
+</html>

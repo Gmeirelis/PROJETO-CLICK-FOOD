@@ -6,6 +6,15 @@
    box-sizing: border-box;
 }
 
+body {
+  background: white;
+   opacity: 0;
+    transition: opacity 0.8s ease;
+}
+body.loaded {
+    opacity: 1;
+}
+
 /* ===========================
    CABEÇALHO / PERFIL
 =========================== */
@@ -50,17 +59,18 @@ header {
   display: flex;
   justify-content: flex-start;
   margin-bottom: 80px;
+  width:100%;
 }
 
 .dados {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
 }
 
 .config {
   display: flex;
-  align-items: center;
   gap: 15px;
   width: 100%;
   padding: 20px 50px;
@@ -92,17 +102,34 @@ header {
 }
 
 @media (min-width: 1024px){
+
   .configuracao {
   margin-top: 80px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   margin-bottom: 80px;
-  margin-left: 400px;
-  margin-right: 400px;
- 
+  width: 100%; 
+  justify-content: center;
+  gap: 20px;
 }
 .dados{
-  gap:30px;
+  
+width:auto;
+}
+.config{
+display: flex;
+justify-content: flex-start;
+padding-left: 100px;
+flex: 1;
+width: 900px;
+ border-bottom: 1px solid #aa9999ef;
+ padding: 40px;
+}
+.config p{
+  font-size: 25px;
+}
+.config i {
+  font-size: 30px;
 }
 }
 /* ===========================

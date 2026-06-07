@@ -5,7 +5,14 @@ body {
     background-color: #f7f7f7;
     margin: 0;
     padding-bottom: 150px; /* Espaço para o resumo fixo e menu não cobrirem o conteúdo */
+    opacity: 0;
+    transition: opacity 0.8s ease;
 }
+
+body.loaded {
+    opacity: 1;
+}
+
 
 .container {
     padding: 15px;

@@ -3,8 +3,14 @@
   font-family: "Nunito", sans-serif;
 }
 
+
 body {
-  background-color: #eba03e;
+   background-color: #eba03e;
+   opacity: 0;
+    transition: opacity 0.8s ease;
+}
+body.loaded {
+    opacity: 1;
 }
 /* container geral */
 

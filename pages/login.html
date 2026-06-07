@@ -18,41 +18,87 @@
     <title>Login</title>
   </head>
   <body>
-<main>
-  <section class="container-principal">
-    <form class="formularios">
-      <div class="login">
-        <div class="entrar">
-          <h1>Login</h1>
+    <main>
+      <section class="form">
+        <form class="formularios">
+          <div class="texto">
+            <img
+              class="perfil"
+              src="../assets/img/slides/freepik__upload__45.png"
+            />
+            <h1>Login</h1>
+            <p>Faça seu login para entrar</p>
+          </div>
 
-          <input placeholder="Digite o seu email" type="email" class="email" />
-          <input type="password" placeholder="Digite sua senha" class="password" />
-          
-          <p class="error"></p>
+          <div class="inputs">
+            <input
+              placeholder="seuemail@exemplo.com"
+              type="email"
+              class="email"
+            />
+            <input
+              type="password"
+              placeholder="Digite sua senha"
+              class="password"
+            />
 
-          <button type="button" class="google-login">
-            <i class="fa-brands fa-google"></i>
-            Entrar com Google
-          </button>
+            <p class="error"></p>
 
-          <button id="btnEntrar" type="submit">
-            <span class="texto">Entrar</span>
-            <span class="loader"></span>
-          </button>
+             <div class="btn-fechar">
+            <button id="btnEntrar" type="submit">
+              <span class="texto">Entrar</span>
+              <span class="loader"></span>
+            </button>
+            </div>
+          </div>
+
+          <div class="dividir">
+            <span>continuir com </span>
+          </div>
+
+          <div class="redes">
+            <div>
+              <button type="button" class="google-login">
+                <img
+                  class="google"
+                  src="../assets/img/icons/google.png"
+                  alt=""
+                />
+                Google
+              </button>
+            </div>
+            <div>
+              <button type="button" class="google-login">
+                <img
+                  class="google"
+                  src="../assets/img/icons/apple.png"
+                  alt=""
+                />
+                Apple
+              </button>
+            </div>
+          </div>
 
           <div class="cadastro">
             <a href="cadastro.html">Não tenho conta</a>
             <a href="#">Esqueci minha senha</a>
           </div>
-        </div>
-      </div>
-    </form>
-  </section>
-</main>
-    <script type="module" src="../assets/js/auth/authService.js"></script>
-    <script  type="module" src="../assets/js/auth/login.js"></script>
-    <script type="module" src="../assets/js/loading.js"></script>
-   
+        </form>
+      </section>
 
+    
+
+      <section class="banner">
+
+  <article class="container">
+        <h1>Descubra restaurantes incríveis perto de você</h1>
+        <img src="../assets/img/icons/motoboy.png" class="motoboy">
+      </article>
+
+
+      </section>
+    </main>
+    <script src="../assets/js/auth/login.js"></script>
+   
   </body>
 </html>
