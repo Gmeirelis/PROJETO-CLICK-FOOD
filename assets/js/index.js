@@ -196,7 +196,7 @@ function perfil() {
 
   perfil.innerHTML = `
   <div class ="conatinerFotodePerfil">
-  <img class="perfil" src="../assets/img/icons/conta-de-perfil.png">
+  <img class="perfil" src="../assets/img/icons/contadeperfil.png">
   <i class="fa-solid fa-chevron-down"></i>
   </div>
   `;
