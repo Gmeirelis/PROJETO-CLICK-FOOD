@@ -9,8 +9,7 @@ let restaurantes = [];
 async function carregarDados() {
   try {
     restaurantes = await getRestaurantes();
-    console.log("Restaurantes carregados", restaurantes);
-    console.log(restaurantes)
+   
   } catch (error) {
     console.error("Erro ao carregar os dados:", error);
   }
