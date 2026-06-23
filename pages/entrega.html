@@ -1,72 +1,140 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/css/pages/entega.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/tabler-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+    <title>Entrega - Minha Compra</title>
+</head>
+<body>
+    <main>
+        <!-- Header -->
+        <header class="header-entrega">
+            <button class="btn-voltar" onclick="window.history.back()">
+                <i class="ti ti-arrow-left"></i>
+            </button>
+            <h1>Minha Compra</h1>
+            <div class="header-spacer"></div>
+        </header>
 
-    <title>Entrega</title>
-  </head>
-  <body>
-    <header>
+        <!-- Passos do Checkout -->
+        <div class="checkout-steps">
+            <div class="step completed">
+                <div class="step-number">✓</div>
+                <div class="step-label">Pagamento</div>
+            </div>
+            <div class="step active">
+                <div class="step-number">2</div>
+                <div class="step-label">Preparando</div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-label">Entregue</div>
+            </div>
+        </div>
 
-    <button class="btn-voltar">
-  <svg width="24" height="24" viewBox="0 0 24 24">
-    <path d="M15 18l-6-6 6-6" stroke="black" stroke-width="2" fill="none"/>
-  </svg>
-</button>
+        <!-- Status Principal -->
+        <section class="status-principal">
+            <div class="status-icon-container">
+                <img class="status-img" src="../assets/img/imagens/confirmado.png" alt="Confirmado" />
+                <div class="pulse-indicator"></div>
+            </div>
+            <h2>Preparando seu pedido</h2>
+            <p class="status-subtitulo">Seu pedido está sendo preparado com ❤️</p>
+        </section>
 
-      <h1>Minha Compra</h1>
-    </header>
+        <!-- Informações Resumidas -->
+        <div class="info-card">
+            <div class="info-grid">
+                <div class="info-item">
+                    <p class="info-label">Pedido</p>
+                    <p class="info-value" id="numero-pedido">#20250</p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">Entrega em</p>
+                    <p class="info-value" id="tempo-entrega">1h 30min</p>
+                </div>
+            </div>
 
-    <div class="container">
-      <div class="img-confirmado">
-        <img
-          class="confirmado-img"
-          src="../assets/img/imagens/confirmado.png"
-        />
-      </div>
-      <div class="text">
-        <h2>Preparando seu pedido</h2>
-      </div>
-    </div>
+            <div class="info-divider"></div>
 
-    <section class="descricao">
+            <div class="info-section">
+                <p class="info-label">Itens do pedido</p>
+                <div class="items-list renderizar" id="items-lista">
+                    <!-- Renderizado dinamicamente -->
+                </div>
+            </div>
 
-   
-     <div class="renderizar"></div>
-     
+            <div class="info-divider"></div>
 
-    </section>
+            <div class="info-total">
+                <p class="info-label">Total</p>
+                <p class="info-value-total" id="valor-total">R$ 0,00</p>
+            </div>
+        </div>
 
-<div class="status-container">
-  <div class="linha"></div>
+        <!-- Timeline/Progresso -->
+        <section class="timeline-section">
+            <p class="timeline-label">Acompanhe o status</p>
+            
+            <div class="status-container">
+                <svg class="timeline-bar" viewBox="0 0 300 60" preserveAspectRatio="none">
+                    <!-- Barra de fundo -->
+                    <line x1="20" y1="30" x2="280" y2="30" stroke="currentColor" stroke-width="2" opacity="0.2"/>
+                    
+                    <!-- Barra de progresso (até etapa atual) -->
+                    <line x1="20" y1="30" x2="150" y2="30" stroke="#4caf50" stroke-width="2"/>
+                    
+                    <!-- Círculos -->
+                    <circle cx="20" cy="30" r="8" fill="#4caf50" class="step-circle"/>
+                    <circle cx="150" cy="30" r="8" fill="#4caf50" class="step-circle active"/>
+                    <circle cx="280" cy="30" r="8" fill="currentColor" opacity="0.2" class="step-circle"/>
+                </svg>
+                
+                <div class="etapas-info">
+                    <div class="etapa completed">
+                        <div class="bola">✔</div>
+                        <span>Confirmado</span>
+                    </div>
+                    <div class="etapa ativa">
+                        <div class="bola"></div>
+                        <span>Preparando</span>
+                    </div>
+                    <div class="etapa">
+                        <div class="bola"></div>
+                        <span>Saiu para Entrega</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <div class="etapa ativa">
-    <div class="bola">✔</div>
-    <span>Confirmado</span>
-  </div>
+        <!-- Endereço de Entrega -->
+        <section class="endereco-section">
+            <p class="section-label">Endereço de entrega</p>
+            <div class="endereco-card">
+                <i class="ti ti-map-pin"></i>
+                <div class="endereco-texto" id="endereco-info">
+                    <p class="endereco-rua">Rua das Flores, 123</p>
+                    <p class="endereco-bairro">Centro, São Paulo - SP</p>
+                </div>
+            </div>
+        </section>
 
-  <div class="etapa ativa">
-    <div class="bola"></div>
-    <span>Preparando</span>
-  </div>
+        <!-- Botões de Ação -->
+        <section class="acoes-section">
+            <button class="btn-acao secundario" onclick="ligarParaRestaurante()">
+                <i class="ti ti-phone"></i> Ligar
+            </button>
+            <button class="btn-acao primario" onclick="rastrearPedido()">
+                <i class="ti ti-map"></i> Rastrear
+            </button>
+        </section>
 
-  <div class="etapa">
-    <div class="bola"></div>
-    <span>Saiu para Entrega</span>
-  </div>
-</div>
+    </main>
 
     <script src="../assets/js/entrega.js"></script>
-  </body>
+</body>
 </html>

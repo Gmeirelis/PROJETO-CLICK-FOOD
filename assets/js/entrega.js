@@ -1,121 +1,301 @@
+// ===== DADOS DO PEDIDO =====
+const dadosCompra = JSON.parse(localStorage.getItem("compraAtual")) || {};
+const dadosUsuario = JSON.parse(localStorage.getItem("usuarioLogado")) || [];
 const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-console.log(carrinho);
+// ===== INICIALIZAR PÁGINA =====
+document.addEventListener('DOMContentLoaded', function() {
+    renderizarDadosPedido();
+    renderizarItens();
+    renderizarEndereco();
+    atualizarTimeline();
+});
 
-function detalhes() {
-  const renderizar = document.querySelector(".renderizar");
+// ===== FUNÇÃO: RENDERIZAR DADOS DO PEDIDO =====
+function renderizarDadosPedido() {
+    // Número do pedido (pode ser aleatório ou do servidor)
+    const numeroPedido = gerarNumeroPedido();
+    document.getElementById('numero-pedido').textContent = `#${numeroPedido}`;
 
-  let inical = 0;
-  carrinho.forEach((carrinhos) => {
-    inical += carrinhos.valor;
-  });
+    // Tempo estimado de entrega
+    const tempoEntrega = calcularTempoEntrega();
+    document.getElementById('tempo-entrega').textContent = tempoEntrega;
 
-  const itens = carrinho
-    .map((item) => {
-      return `<p>${item.nome} - ${item.valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</p>`;
-    })
-    .join(" ");
-
-  renderizar.innerHTML = `
-  
-<div>
-<h3>Numero do pedido:</h3>
-<p>#20250</p>
-</div>
-<div>
-<h3>Estimativa de entrega:</h3>
-<p>1h-3h</p>
-</div>
-
-<div class="item">
-<h3>Itens:</h3>
-  ${itens}
-</div>
-
-<div>
-<h3> Valor total:</h3>
-<p>${inical.toFixed(2)}R$</P>
-</div>
-
-
-`;
+    // Valor total
+    const valorTotal = calcularTotal();
+    document.getElementById('valor-total').textContent = `R$ ${formatarMoeda(valorTotal)}`;
 }
 
-detalhes();
-
-/*load*/
-
-function atualizarStatus(passo) {
-  const etapas = document.querySelectorAll(".etapa");
-  const linha = document.querySelector(".linha");
-
-  etapas.forEach((etapa, index) => {
-    if (index <= passo) {
-      etapa.classList.add("ativa");
-    } else {
-      etapa.classList.remove("ativa");
+// ===== FUNÇÃO: RENDERIZAR ITENS =====
+function renderizarItens() {
+    const itemsContainer = document.getElementById('items-lista');
+    
+    if (!Array.isArray(carrinho) || carrinho.length === 0) {
+        itemsContainer.innerHTML = '<p>Nenhum item no carrinho</p>';
+        return;
     }
-  });
 
-  const progresso = (passo / (etapas.length - 1)) * 100;
-  linha.style.setProperty("--progresso", progresso + "%");
-}
-// fluxo automático
-function iniciarFluxo() {
-  atualizarStatus(0); // Confirmado
+    let htmlItens = '';
+    carrinho.forEach(item => {
+        const quantidade = item.quantidade || 1;
+        htmlItens += `<p>${quantidade}x ${item.nome}</p>`;
+    });
 
-  setTimeout(() => {
-    atualizarStatus(1); // Preparando
-
-    setTimeout(() => {
-      atualizarStatus(2); // Saiu para entrega
-    }, 4000);
-  }, 4000);
+    itemsContainer.innerHTML = htmlItens;
 }
 
-iniciarFluxo();
+// ===== FUNÇÃO: RENDERIZAR ENDEREÇO =====
+function renderizarEndereco() {
+    const enderecoData = dadosUsuario.endereco?.[0] || {};
+    const rua = enderecoData.rua || "Rua não informada";
+    const numero = enderecoData.numero || "S/N";
+    const bairro = enderecoData.bairro || "Bairro não informado";
+    const cidade = enderecoData.cidade || "Cidade";
+    const estado = enderecoData.estado || "UF";
 
-
-const btn = document.querySelector(".btn-voltar");
-
-
-
-btn.addEventListener("click", apagar);
-
-function apagar() {
-  const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-
-  if (carrinho.length === 0) {
-    alert("Seu carrinho está vazio!");
-    return;
-  }
-
-  const total = carrinho.reduce(
-    (acc, item) => acc + (item.valor * (item.qtd || 1)),
-    0
-  );
-
-  const dados = {
-    id: Date.now(),
-    valor: total,
-    data: new Date().toLocaleString(),
-    status: "entregue",
-    itens: carrinho.map((item) => ({
-      restaurante: item.restaurante,
-      imagem:item.imagem,
-      nome: item.nome,
-      valor: item.valor,
-      qtd: item.qtd || 1,
-    })),
-  };
-
-  const historico = JSON.parse(localStorage.getItem("historico")) || [];
-
-  historico.push(dados);
-
-  localStorage.setItem("historico", JSON.stringify(historico));
-
-  localStorage.removeItem("carrinho");
-
-  window.location.href = "../index.html";
+    const enderecoInfo = document.getElementById('endereco-info');
+    enderecoInfo.innerHTML = `
+        <p class="endereco-rua">${rua}, ${numero}</p>
+        <p class="endereco-bairro">${bairro}, ${cidade} - ${estado}</p>
+    `;
 }
+
+// FUNÇÃO: ATUALIZAR TIMELINE 
+function atualizarTimeline(etapa = 2) {
+    // etapa 1 = Confirmado
+    // etapa 2 = Preparando (atual)
+    // etapa 3 = Saiu para entrega
+    
+    const labels = document.querySelectorAll('.timeline-label-item');
+    labels.forEach((label, index) => {
+        label.classList.remove('completed', 'active');
+        
+        if (index + 1 < etapa) {
+            label.classList.add('completed');
+        } else if (index + 1 === etapa) {
+            label.classList.add('active');
+        }
+    });
+}
+
+//  FUNÇÃO: CALCULAR TEMPO ESTIMADO
+function calcularTempoEntrega() {
+    
+    const minutos = Math.floor(Math.random() * 120) + 60; // 60 a 180 minutos
+    const horas = Math.floor(minutos / 60);
+    const mins = minutos % 60;
+
+    if (horas === 0) {
+        return `${mins}min`;
+    }
+    return `${horas}h ${mins}min`;
+}
+
+// ===== FUNÇÃO: CALCULAR TOTAL =====
+function calcularTotal() {
+    if (!Array.isArray(carrinho) || carrinho.length === 0) {
+        return 0;
+    }
+
+    let total = 0;
+    carrinho.forEach(item => {
+        const quantidade = item.quantidade || 1;
+        const preco = parseFloat(item.preco) || 0;
+        total += quantidade * preco;
+    });
+
+    // Adicionar frete
+    const frete = dadosUsuario.endereco?.[0]?.frete || 25;
+    total += frete;
+
+    return total;
+}
+
+// ===== FUNÇÃO: GERAR NÚMERO DO PEDIDO =====
+function gerarNumeroPedido() {
+    // Usar número salvo ou gerar novo
+    const pedidoExistente = sessionStorage.getItem('numeroPedido');
+    if (pedidoExistente) {
+        return pedidoExistente;
+    }
+
+    const numero = Math.floor(Math.random() * 90000) + 10000;
+    sessionStorage.setItem('numeroPedido', numero);
+    return numero;
+}
+
+// ===== FUNÇÃO: FORMATAR MOEDA =====
+function formatarMoeda(valor) {
+    return parseFloat(valor).toFixed(2).replace('.', ',');
+}
+
+//  FUNÇÃO: LIGAR PARA RESTAURANTE 
+function ligarParaRestaurante() {
+    const telefone = "1133334444"; // Número do restaurante
+    
+    // Se for mobile, abrir dialer
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        window.location.href = `tel:${telefone}`;
+    } else {
+        // Em desktop, mostrar mensagem
+        alert(`Telefone do restaurante: (${telefone.slice(0, 2)}) ${telefone.slice(2, 7)}-${telefone.slice(7)}`);
+    }
+}
+
+// FUNÇÃO: RASTREAR PEDIDO 
+function rastrearPedido() {
+    
+    console.log('Rastreando pedido...');
+    
+   
+    mostrarRastreamento();
+}
+
+// FUNÇÃO: MOSTRAR RASTREAMENTO 
+function mostrarRastreamento() {
+    // Simulação de rastreamento
+    const rastreamento = document.createElement('div');
+    rastreamento.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.5);
+        display: flex;
+        align-items: flex-end;
+        z-index: 1000;
+    `;
+
+    rastreamento.innerHTML = `
+        <div style="
+            background: white;
+            width: 100%;
+            border-radius: 12px 12px 0 0;
+            padding: 2rem;
+            animation: slideUp 0.3s ease;
+        ">
+            <button onclick="this.closest('div').parentElement.remove()" style="
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                background: transparent;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+            ">×</button>
+            
+            <h3 style="margin-bottom: 1rem; color: #1a1a1a;">Rastreamento em tempo real</h3>
+            <div style="height: 300px; background: #f0f0f0; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                <p style="color: #666; text-align: center;">
+                    Mapa carregando...<br/>
+                    Seu pedido está a <strong>2.5 km</strong> de você
+                </p>
+            </div>
+            
+            <div style="background: #f9f9f9; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                <p style="margin: 0; font-size: 13px; color: #666;">ETA de entrega</p>
+                <p style="margin: 0.5rem 0 0; font-size: 16px; font-weight: 600; color: #d4a541;">18 minutos</p>
+            </div>
+            
+            <button onclick="this.closest('div').parentElement.remove()" style="
+                width: 100%;
+                padding: 0.75rem;
+                background: #d4a541;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                font-weight: 600;
+                cursor: pointer;
+            ">Fechar</button>
+        </div>
+    `;
+
+    document.body.appendChild(rastreamento);
+
+    // Remover ao clicar fora
+    rastreamento.addEventListener('click', (e) => {
+        if (e.target === rastreamento) {
+            rastreamento.remove();
+        }
+    });
+}
+
+// ===== FUNÇÃO: SIMULAR ATUALIZAÇÃO DE STATUS =====
+function simularProgresso() {
+    
+    const etapas = [
+        { numero: 2, tempo: 5000, mensagem: 'Preparando...' },
+        { numero: 3, tempo: 15000, mensagem: 'Saiu para entrega!' }
+    ];
+
+    etapas.forEach(etapa => {
+        setTimeout(() => {
+            atualizarTimeline(etapa.numero);
+            console.log(etapa.mensagem);
+           
+        }, etapa.tempo);
+    });
+}
+
+
+// ===== FUNÇÕES AUXILIARES =====
+
+function formatarData(data) {
+    const opcoes = { 
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    };
+    return new Date(data).toLocaleDateString('pt-BR', opcoes);
+}
+
+/**
+ * Obter tempo decorrido desde um evento
+ */
+function tempoDecorrido(dataInicio) {
+    const agora = new Date();
+    const inicio = new Date(dataInicio);
+    const diferenca = agora - inicio;
+    
+    const minutos = Math.floor(diferenca / 60000);
+    const horas = Math.floor(minutos / 60);
+    const dias = Math.floor(horas / 24);
+    
+    if (dias > 0) return `${dias} dia${dias > 1 ? 's' : ''} atrás`;
+    if (horas > 0) return `${horas} hora${horas > 1 ? 's' : ''} atrás`;
+    if (minutos > 0) return `${minutos} minuto${minutos > 1 ? 's' : ''} atrás`;
+    return 'agora mesmo';
+}
+
+/**
+ * Salvar dados do pedido
+ */
+function salvarDadosPedido(dados) {
+    localStorage.setItem('pedidoAtual', JSON.stringify(dados));
+}
+
+/**
+ * Redirecionar para home ou histórico
+ */
+function irParaHome() {
+    window.location.href = 'index.html';
+}
+
+// ===== ANIMATION STYLES =====
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideUp {
+        from {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+`;
+document.head.appendChild(style);

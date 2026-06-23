@@ -3,60 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/pages/pagamento.css">
-      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-       <link rel="stylesheet" href="../assets/css/components/loanding.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/components/loanding.css">
     <title>Pagamento</title>
 </head>
 <body>
-    <header>
-        <h1>Sacola</h1>
-    </header>
     <main>
-
-
-<span class="renerizar-endereco"></span>
-
-
-
-
-<section class="pagamento">
-  <h2>Forma de Pagamento</h2>
-  
-  <div class="opcoes-pagamento">
-    <div class="metodo-card" onclick="selecionarPagamento('pix',this)">
-      <i class="fas fa-pix"></i>
-      <span>Pix</span>
-    </div>
-
-    <div class="metodo-card" onclick="selecionarPagamento('cartao',this)">
-      <i class="fas fa-credit-card"></i>
-      <span>Cartão</span>
-    </div>
-
-    <div class="metodo-card" onclick="selecionarPagamento('dinheiro',this)">
-      <i class="fas fa-money-bill-wave"></i>
-      <span>Dinheiro</span>
-    </div>
-  </div>
-
-  <div id="campo-troco" style="display: none;">
-    <input type="number" placeholder="Troco para quanto?">
-  </div>
-</section>
-
-<span class="container-resumo"></span>
-
-<div class="container-finalizar">
- <div class="btn-fechar">
-      <button id="btnEntrar">
-        <span class="texto" id="finisher">Finalizar compra</span>
-        <span class="loader"></span>
-      </button>
-    </div>
-</div>
-
+        <!-- Passos do Checkout -->
+        <div class="checkout-steps">
+            <div class="step completed">
+                <div class="step-number">✓</div>
+                <div class="step-label">Carrinho</div>
+            </div>
+            <div class="step active">
+                <div class="step-number">2</div>
+                <div class="step-label">Pagamento</div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-label">Confirmação</div>
+            </div>
+        </div>
+ 
+        <!-- Endereço -->
+        <span class="renerizar-endereco"></span>
+ 
+        <!-- Resumo da Compra -->
+        <div class="resumo-section">
+            <h2>Resumo do Pedido</h2>
+            <span class="container-resumo"></span>
+        </div>
+ 
+        <!-- Seção de Pagamento -->
+        <section class="pagamento">
+            <h2>Forma de Pagamento</h2>
+            
+            <div class="opcoes-pagamento">
+                <div class="metodo-card" onclick="selecionarPagamento('pix',this)">
+                    <input type="radio" name="pagamento" id="pix-radio" value="pix">
+                    <label for="pix-radio">
+                        <i class="fas fa-qrcode"></i>
+                        <span>Pix</span>
+                    </label>
+                    <div class="checkmark">✓</div>
+                </div>
+ 
+                <div class="metodo-card" onclick="selecionarPagamento('cartao',this)">
+                    <input type="radio" name="pagamento" id="cartao-radio" value="cartao">
+                    <label for="cartao-radio">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Cartão</span>
+                    </label>
+                    <div class="checkmark">✓</div>
+                </div>
+ 
+                <div class="metodo-card" onclick="selecionarPagamento('dinheiro',this)">
+                    <input type="radio" name="pagamento" id="dinheiro-radio" value="dinheiro">
+                    <label for="dinheiro-radio">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <span>Dinheiro</span>
+                    </label>
+                    <div class="checkmark">✓</div>
+                </div>
+            </div>
+ 
+            <!-- Info do método selecionado -->
+            <div class="payment-info-box">
+                <strong id="payment-method-name">Pix Selecionado:</strong>
+                <p id="payment-method-info">Você receberá um código QR para escanear no seu banco. Pagamento em tempo real, sem taxa.</p>
+            </div>
+ 
+            <div id="campo-troco" class="troco-input" style="display: none;">
+                <label for="troco-valor">Troco para quanto?</label>
+                <input type="number" id="troco-valor" placeholder="Digite o valor" min="0" step="0.01">
+            </div>
+        </section>
+ 
+        <!-- Botão de Finalizar -->
+        <div class="container-finalizar">
+            <div class="btn-fechar">
+                <button id="btnEntrar">
+                    <span class="texto" id="finisher">Finalizar Compra</span>
+                    <span class="loader"></span>
+                </button>
+            </div>
+        </div>
+ 
     </main>
     <script src="../assets/js/pagamento.js"></script>
     <script src="../assets/js/reload.js"></script>

@@ -107,7 +107,7 @@ header {
   margin-top: 80px;
   display: flex;
   justify-content: center;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   width: 100%; 
   justify-content: center;
   gap: 20px;
@@ -121,15 +121,15 @@ display: flex;
 justify-content: flex-start;
 padding-left: 100px;
 flex: 1;
-width: 900px;
+width: 800px;
  border-bottom: 1px solid #aa9999ef;
  padding: 40px;
 }
 .config p{
-  font-size: 25px;
+  font-size: 15spx;
 }
 .config i {
-  font-size: 30px;
+  font-size: 15px;
 }
 }
 /* ===========================

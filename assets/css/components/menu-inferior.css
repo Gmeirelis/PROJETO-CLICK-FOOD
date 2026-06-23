@@ -49,12 +49,12 @@
 @media (min-width: 1024px) {
   .menu-inferior {
  width: 100%;
-    max-width: 1200px; /* Define um limite de largura para não esticar no monitor todo */
+    max-width: 800px; /* Define um limite de largura para não esticar no monitor todo */
     left: 50%;
     transform: translateX(-50%); /* Técnica clássica para centralizar elementos fixos */
     background: #e79026;
     border-radius: 15px 15px 0 0; /* Arredonda só as pontas de cima */
-    padding: 10px 20px;
+    padding: 5px 20px;
   }
 
   .menu-inferior .item {

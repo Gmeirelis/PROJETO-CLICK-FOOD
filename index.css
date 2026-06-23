@@ -21,6 +21,8 @@ body.loaded {
   align-items: center;
   justify-content: space-between;
   padding: 15px 25px;
+
+  
 }
 
 .logo-img {
@@ -41,8 +43,9 @@ body.loaded {
     align-items: center;
     justify-content: space-between;
     padding: 15px 25px;
-    margin-left: 600px;
-    margin-right: 600px;
+    margin-left: 400px;
+    margin-right: 400px;
+    gap: 30px;
   }
   .logo-img {
     width: 150px;
@@ -195,8 +198,8 @@ body.loaded {
   }
 
   .categoria2 img {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     object-fit: contain;
     border-radius: 10px;
   }
@@ -310,7 +313,7 @@ body.loaded {
 }
 
 .buscar-box {
-  background: #f5f5f5;
+  background: #ffffff;
   padding: 12px 20px;
   border-radius: 25px;
   width: 90%;
