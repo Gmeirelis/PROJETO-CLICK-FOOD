@@ -10,7 +10,7 @@
 
 getRestaurantes().then(dados => {
   restaurantes = dados;
- console.log(dados)
+ 
   renderizarRestaurantes(restaurantes);
   renderizarListaderestaurante(restaurantes);
 });
