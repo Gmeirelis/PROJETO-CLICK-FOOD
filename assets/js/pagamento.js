@@ -3,9 +3,6 @@ const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 const dadosUsuario = JSON.parse(localStorage.getItem("usuarioLogado")) || []
 
 
-console.log(carrinho)
-console.log(dadosUsuario)
-
 
 
 
@@ -55,8 +52,7 @@ function selecionarPagamento(tipo,elemento) {
   } else {
     trocoDiv.style.display = 'none';
   }
-  
-  console.log("Usuário escolheu: " + tipo);
+
 }
   
 /* deixa o card selecionado */
