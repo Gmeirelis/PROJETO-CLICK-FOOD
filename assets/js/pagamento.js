@@ -47,7 +47,7 @@ function renderizarResumo() {
         
         carrinho.forEach(item => {
             const quantidade = item.quantidade || 1;
-            const preco = parseFloat(item.preco) || 0;
+            const preco = parseFloat(item.valor) || 0;
             const subtotal = quantidade * preco;
             total += subtotal;
 
@@ -60,15 +60,15 @@ function renderizarResumo() {
         });
 
      
-        const frete = dadosUsuario.endereco?.[0]?.frete || 25.00;
+        
         htmlGerado += `
             <div class="resumo-item">
                 <span class="resumo-label">Frete</span>
-                <span class="resumo-valor">R$ ${frete.toFixed(2).replace('.', ',')}</span>
+                <span class="resumo-valor">R$ 00,00 </span>
             </div>
         `;
 
-        total += frete;
+        total 
 
       
         htmlGerado += `
@@ -133,7 +133,7 @@ function gerenciarTroco(metodo) {
 
 // ===== FUNÇÃO: SELECIONAR PAGAMENTO (Seu código + novas funcionalidades) =====
 function selecionarPagamento(tipo, elemento) {
-    // Guardar método selecionado
+    
     metodoPagamentoSelecionado = tipo;
 
     // Remove a classe 'ativo' de todos e adiciona no selecionado

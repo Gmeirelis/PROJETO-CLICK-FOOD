@@ -520,12 +520,12 @@ body.loaded {
   padding-bottom: 100px;
 }
 .link-wrapper {
-  display: flex; /* Alinha imagem e texto lado a lado */
+  display: flex; 
   align-items: center;
   padding: 16px;
   text-decoration: none;
   color: #3e3e3e;
-  border: 1px solid #fff8f88e; /* Borda bem clarinha */
+  border: 1px solid #fff8f88e; 
   border-radius: 8px;
   transition: background 0.2s;
 }
@@ -534,7 +534,7 @@ body.loaded {
   background-color: #f7f7f7;
 }
 
-/* Logo circular do iFood */
+
 .container-img img {
   width: 60px;
   height: 60px;
@@ -577,9 +577,17 @@ body.loaded {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 20px;
     padding: 20px;
+    border: 1px black solid
   }
 
   .restaurantes {
-    margin: 0px 600px 0px 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    right: 80px;
+    margin-right: 100px;
+    width: 600px;
+    margin: 0px 600px 40px 600px;
   }
 }

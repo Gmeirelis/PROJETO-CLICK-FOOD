@@ -221,6 +221,16 @@ function mostrarRastreamento() {
     });
 }
 
+
+function salvarDados(){
+    localStorage.setItem('historico', JSON.stringify(dadosCompra));
+      window.location.href = '../index.html';
+}
+
+
+
+
+
 // ===== FUNÇÃO: SIMULAR ATUALIZAÇÃO DE STATUS =====
 function simularProgresso() {
     
@@ -270,19 +280,6 @@ function tempoDecorrido(dataInicio) {
     return 'agora mesmo';
 }
 
-/**
- * Salvar dados do pedido
- */
-function salvarDadosPedido(dados) {
-    localStorage.setItem('pedidoAtual', JSON.stringify(dados));
-}
-
-/**
- * Redirecionar para home ou histórico
- */
-function irParaHome() {
-    window.location.href = 'index.html';
-}
 
 // ===== ANIMATION STYLES =====
 const style = document.createElement('style');

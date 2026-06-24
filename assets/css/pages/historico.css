@@ -6,194 +6,408 @@
   font-family: "Nunito", sans-serif;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-width: 70%;
-  }
+html, body {
+  width: 100%;
+  height: 100%;
 }
 
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 100%;
-}
-/*header */
-
-/*desktop*/
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: orange;
-    max-width: 50%;
-    padding: 25px;
-  }
-
-  header h1 {
-    color: white;
-  }
+  background-color: #f8f8f8;
+  min-height: 100vh;
 }
 
-/*mobile*/
+/* ------------------- HEADER ------------------- */
+
 header {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
-  background-color: orange;
+  background: linear-gradient(135deg, #FF9800 0%, #FFB84D 100%);
   width: 100%;
-  padding: 15px;
-  gap: 20px;
+  padding: 18px 20px;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(255, 152, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.btn-voltar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 18px;
+}
+
+.btn-voltar:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(-2px);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-content i {
+  font-size: 24px;
+  color: white;
 }
 
 header h1 {
   color: white;
-  font-size: 20px;
-  font-weight: 200;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
-.fa-chevron-left {
-  color: white;
+/* ------------------- MAIN CONTENT ------------------- */
+
+main {
+  width: 100%;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* ultimos restaurante */
-
-/*seção*/
-
-/*mobile*/
-.ultimosRestaurante{
+.ultimosRestaurante {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  min-width: 40vh;
-  margin-top: 70px;
-  min-height: auto;
-
-  
+  width: 100%;
 }
+
+.stats {
+  margin-bottom: 24px;
+  padding: 0 4px;
+}
+
+.contador-pedidos {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
 .ultimo {
   display: flex;
-  margin-top: 60px;
   flex-direction: column;
-  height: 600px;
-  overflow-y: auto;
-  gap: 0px;
+  gap: 12px;
+  width: 100%;
 }
 
-.title {
-  display: flex;
-  justify-content: start;
-}
-
-/*desktop*/
-@media (min-width: 1024px) {
-  .ultimosRestaurante {
-    display: flex;
-    position: relative;
-    right: 50px;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 800px;
-    margin-top: 70px;
-  
-  }
-
-  .ultimo {
-    display: flex;
-    margin-top: 60px;
-    flex-direction: column;
-    gap: 60px;
-  }
-}
-
-/*card de renderização*/
-
-/*mobile*/
+/* ------------------- RENDERIZAR CONTAINER ------------------- */
 
 .renderizar {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 15px;
-}
-
-.card-pedidos {
-  background: #fff;
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  border-left: 5px solid #ffa500;
-}
-
-.card-pedidos h4 {
-  margin: 0 0 8px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.card-pedidos p {
-  margin: 4px 0;
-  color: #444;
-  font-size: 14px;
-}
-
-.status {
-  color: #28a745;
-  font-weight: bold;
-}
-
-.data {
-  color: #777;
-  font-size: 12px;
-}
-
-/* desktop*/
-@media (min-width: 1024px) {
-
-
-  .renderizar {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding: 15px;
- 
-  width: 800px;
-}
-
-.card-pedidos {
-  background: #fff;
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  border-left: 5px solid #ffa500;
+  gap: 12px;
   width: 100%;
 }
 
-.card-pedidos h4 {
-  margin: 0 0 8px;
-  font-size: 20px;
-  font-weight: bold;
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  border: 0.5px solid #e0e0e0;
 }
 
-.card-pedidos p {
-  margin: 4px 0;
-  color: #444;
+.empty-state i {
+  font-size: 48px;
+  color: #FFB84D;
+  margin-bottom: 16px;
+}
+
+.empty-state p {
+  font-size: 16px;
+  color: #999;
+}
+
+/* ------------------- CARDS ------------------- */
+
+.card-pedidos {
+  background: white;
+  border-radius: 12px;
+  border: 0.5px solid #e0e0e0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.card-pedidos:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 0.5px solid #f0f0f0;
+}
+
+.card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-titulo {
+  font-size: 15px;
+  font-weight: 600;
+  color: #212121;
+  margin: 0;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.card-preco {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.valor {
   font-size: 18px;
-}
-
-.status {
-  color: #28a745;
-  font-weight: bold;
+  font-weight: 600;
+  color: #212121;
+  margin: 0;
 }
 
 .data {
-  color: #777;
-  font-size: 16px;
+  font-size: 12px;
+  color: #999;
+  margin: 0;
 }
 
+.card-detalhes {
+  padding: 0 16px 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: #666;
+}
+
+.data-completa {
+  margin: 0;
+  color: #999;
+}
+
+/* ------------------- CARD ACTIONS ------------------- */
+
+.card-acoes {
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px;
+  background-color: #fafafa;
+  border-top: 0.5px solid #f0f0f0;
+}
+
+.btn-acao {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 12px;
+  border: 0.5px solid #e0e0e0;
+  background-color: white;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #333;
+  font-family: "Nunito", sans-serif;
+}
+
+.btn-acao:hover {
+  border-color: #d0d0d0;
+  background-color: #fafafa;
+  transform: translateY(-1px);
+}
+
+.btn-acao:active {
+  transform: scale(0.98);
+}
+
+.btn-acao i {
+  font-size: 14px;
+}
+
+.btn-recomprar {
+  color: #FF9800;
+}
+
+.btn-recomprar:hover {
+  background-color: #FFF3E0;
+  border-color: #FFB84D;
+}
+
+.btn-avaliar {
+  color: #666;
+}
+
+.btn-avaliar:hover {
+  background-color: #f5f5f5;
+  border-color: #ccc;
+}
+
+/* ------------------- DESKTOP ------------------- */
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  header {
+    padding: 20px 40px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  main {
+    padding: 40px 20px;
+    max-width: 900px;
+  }
+
+  .ultimosRestaurante {
+    width: 100%;
+  }
+
+  .ultimo {
+    gap: 14px;
+  }
+
+  .renderizar {
+    gap: 14px;
+  }
+
+  .card-pedidos {
+    border-radius: 14px;
+  }
+
+  .card-header {
+    padding: 18px 20px;
+  }
+
+  .card-detalhes {
+    padding: 0 20px 14px 20px;
+  }
+
+  .card-acoes {
+    padding: 12px 16px;
+  }
+
+  .btn-acao {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .card-titulo {
+    font-size: 16px;
+  }
+
+  .valor {
+    font-size: 20px;
+  }
+}
+
+/* ------------------- TABLET ------------------- */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  main {
+    padding: 30px 20px;
+    max-width: 700px;
+  }
+
+  .card-header {
+    padding: 16px 18px;
+  }
+
+  .card-acoes {
+    gap: 10px;
+  }
+
+  .btn-acao {
+    padding: 10px 14px;
+  }
+}
+
+/* ------------------- MOBILE ------------------- */
+
+@media (max-width: 480px) {
+  header {
+    padding: 16px 16px;
+    gap: 12px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  main {
+    padding: 16px;
+  }
+
+  .card-header {
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .card-titulo {
+    font-size: 14px;
+  }
+
+  .valor {
+    font-size: 16px;
+  }
+
+  .card-acoes {
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  .btn-acao {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .btn-acao i {
+    font-size: 12px;
+  }
 }
